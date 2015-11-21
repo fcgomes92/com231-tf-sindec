@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df42338f-5574-419f-bb8e-d6b45c532296" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/local_db.sqlite3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/local_db.sqlite3-journal" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modelagem-db-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/tf_com231.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_init/reclamacoes-fundamentadas-sindec-2009-v2.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_init/teste.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/util/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/util/strings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/views/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/views/csv.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tf_com231/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tf_com231/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tf_com231/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tf_com231/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_db.sqlite3" afterPath="$PROJECT_DIR$/local_db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_db.sqlite3-journal" afterPath="$PROJECT_DIR$/local_db.sqlite3-journal" />
     </list>
     <ignored path="tf_com231.iws" />
     <ignored path=".idea/workspace.xml" />
