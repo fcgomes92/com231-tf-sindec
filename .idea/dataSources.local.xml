@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Oracle - @192.168.0.101" uuid="f491559a-d9c6-4fbf-b53e-516d576b9408">
+      <secret-storage>master_key</secret-storage>
+      <user-name>c##django_sindec</user-name>
+      <schema-pattern>*.C##DJANGO_SINDEC *.PUBLIC *.SYS *.SYSTEM</schema-pattern>
+      <default-schemas>*.C##DJANGO_SINDEC *.PUBLIC</default-schemas>
+    </data-source>
+    <data-source name="Sqlite (Xerial) - local_db.sqlite3" uuid="138529ae-1193-40a1-8235-c7a3245feb59">
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+    </data-source>
+  </component>
+</project>
