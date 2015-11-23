@@ -1,0 +1,48 @@
+{% load staticfiles %}
+{% include "sindec_base/header.html" %}
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="{% static "js/jquery-1.11.3.min.js" %}" crossorigin="anonymous"></script>
+<script src="{% static "js/bootstrap.min.js" %}" crossorigin="anonymous"></script>
+<script src="{% static "js/nuget.js" %}"></script>
+
+
+{% include "sindec_components/navbar.html" %}
+
+
+<main style="margin-top: 75px;">
+
+    {% block content %}{% endblock %}
+
+</main>
+
+<script type="application/javascript">
+
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": true,
+        "onclick": null,
+        "showDuration": "500",
+        "hideDuration": "1000",
+        "timeOut": "2000",
+        "extendedTimeOut": "4000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+
+    {% if messages %}
+        {% if messages %}
+            {% for message in messages %}
+                toastr["{% if message.tags %}{% if message.tags == 'error' %}warning{% else %}info{% endif %}{% endif %}"]("{{ message }}")
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+</script>
+
+{% include "sindec_base/header.html" %}

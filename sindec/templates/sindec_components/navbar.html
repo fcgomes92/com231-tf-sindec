@@ -1,0 +1,134 @@
+{% load staticfiles %}
+{% url "dashboard" as url_dashboard %}
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        {% if request.get_full_path != url_dashboard %}
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url "dashboard" %}">
+                    <img class="logoimg" src="{% static "img/logo.png" %}">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">CNAE<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Adicionar CNAE</a></li>
+                                <li><a href="#">Alterar CNAE</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Relatórios de CNAE</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">Empresas<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Adicionar Empresa</a></li>
+                                <li><a href="#">Alterar Empresa</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Relatórios de Empresa</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">Consumidores<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Adicionar Consumidor</a></li>
+                                <li><a href="#">Alterar Consumidor</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Relatórios de Consumidor</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">Problemas<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Adicionar Problmea</a></li>
+                                <li><a href="#">Alterar Problema</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Relatórios de Problema</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">Assuntos<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Adicionar Assunto</a></li>
+                                <li><a href="#">Alterar Assunto</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Relatórios de Assunto</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">Reclamações<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Adicionar Reclamação</a></li>
+                                <li><a href="#">Alterar Reclamação</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Relatórios de Reclamação</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{% url "logout" %}">
+                                <div class="hidden-xs">
+                                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                                </div>
+                                <div class="hidden-sm hidden-md hidden-lg">
+                                    Logout
+                                </div>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li><a href="{% url "login" %}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        {% else %}
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url "dashboard" %}">
+                    <img class="logoimg" src="{% static "img/logo.png" %}">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url "logout" %}">
+                        <div class="hidden-xs">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </div>
+                        <div class="hidden-sm hidden-md hidden-lg">
+                            Logout
+                        </div>
+                    </a>
+                </li>
+            {% else %}
+                <li><a href="{% url "login" %}">Login</a></li>
+            {% endif %}
+        {% endif %}
+        </div><!-- /.container-fluid -->
+</nav>

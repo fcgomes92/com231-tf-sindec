@@ -1,2 +1,4 @@
 localdb*
 db_init/*
+sindec/migrations/*
+local_db*
