@@ -46,27 +46,101 @@ def relatorio_top_10_problemas(context):
 
     return context
 
+
+def relatorio_reclamacoes_problemas_top_10_atendidas_ou_nao_atendidas(context, atendidas=True):
+    reclamacoes = list()
+    qtd_reclamacoes = list()
+    qtd_reclamacoes_data = list()
+    for p in Reclamacao.objects.values('atendida', 'problema__descricao_problema').annotate(
+            num_reclamacoes=Count('atendida')).filter(atendida=atendidas).order_by('-num_reclamacoes')[:10]:
+        reclamacoes.append(p.get("problema__descricao_problema", ""))
+        qtd_reclamacoes_data.append(p.get("num_reclamacoes", ""))
+    qtd_reclamacoes.append({
+        "name": "Reclamações {}".format("Atendidas" if atendidas else "Não Atendidas"),
+        "data": qtd_reclamacoes_data
+    })
+    context["categorias"] = reclamacoes
+    context["conjuntos"] = qtd_reclamacoes
+    context["titulo_grafico"] = "TOP 10 Reclamações {} - Por Problema".format(
+        "Atendidas" if atendidas else "Não Atendidas")
+    context["metrica"] = "Reclamações"
+    context["labely"] = "Quantidade de Reclamações {}".format("Atendidas" if atendidas else "Não Atendidas")
+
+    return context
+
+
+def relatorio_reclamacoes_assuntos_top_10_atendidas_ou_nao_atendidas(context, atendidas=True):
+    reclamacoes = list()
+    qtd_reclamacoes = list()
+    qtd_reclamacoes_data = list()
+    for p in Reclamacao.objects.values('atendida', 'assunto__descricao_assunto').annotate(
+            num_reclamacoes=Count('atendida')).filter(atendida=atendidas).order_by('-num_reclamacoes')[:10]:
+        reclamacoes.append(p.get("assunto__descricao_assunto", ""))
+        qtd_reclamacoes_data.append(p.get("num_reclamacoes", ""))
+    qtd_reclamacoes.append({
+        "name": "Reclamações {}".format("Atendidas" if atendidas else "Não Atendidas"),
+        "data": qtd_reclamacoes_data
+    })
+    context["categorias"] = reclamacoes
+    context["conjuntos"] = qtd_reclamacoes
+    context["titulo_grafico"] = "TOP 10 Reclamações {} - Por Assunto".format(
+        "Atendidas" if atendidas else "Não Atendidas")
+    context["metrica"] = "Reclamações"
+    context["labely"] = "Quantidade de Reclamações {}".format("Atendidas" if atendidas else "Não Atendidas")
+
+    return context
+
+
+def relatorio_reclamacoes_empresas_geral_atendidas_e_nao(context, quantidade=10):
+    reclamacoes = list()
+    qtd_reclamacoes = list()
+    qtd_reclamacoes_total = list()
+    qtd_reclamacoes_atendida = list()
+    qtd_reclamacoes_natendida = list()
+    for p in Reclamacao.objects.values('empresa', 'empresa__razao_social_sindec').annotate(
+            num_reclamacoes=Count('atendida')).order_by('-num_reclamacoes')[:quantidade]:
+        reclamacoes_an = Reclamacao.objects.filter(empresa=p.get("empresa")).values('atendida').annotate(
+            num_reclamacoes=Count('atendida')).order_by('atendida')
+        reclamacoes.append(p.get("empresa__razao_social_sindec", ""))
+        qtd_reclamacoes_total.append(p.get("num_reclamacoes", ""))
+        qtd_reclamacoes_natendida.append(reclamacoes_an[0].get("num_reclamacoes"))
+        qtd_reclamacoes_atendida.append(reclamacoes_an[1].get("num_reclamacoes"))
+    qtd_reclamacoes.append({
+        "name": "Total de Reclamações",
+        "data": qtd_reclamacoes_total
+    })
+    qtd_reclamacoes.append({
+        "name": "Total de Reclamações - Não Atendidas",
+        "data": qtd_reclamacoes_natendida
+    })
+    qtd_reclamacoes.append({
+        "name": "Total de Reclamações - Atendidas",
+        "data": qtd_reclamacoes_atendida
+    })
+    context["categorias"] = reclamacoes
+    context["conjuntos"] = qtd_reclamacoes
+    context["titulo_grafico"] = "TOP {} Reclamações Por Empresa".format(quantidade)
+    context["metrica"] = "Reclamações"
+    context["labely"] = "Quantidade de Reclamações Por Empresa"
+
+    return context
+
+
 # Relatórios em pizza
 def relatorio_reclamacoes_atendidas(context):
     if context is None:
         context = dict()
     reclamacoes = list()
     qtd_reclamacoes = list()
-    qtd_reclamacoes_data = list()
-    for p in Reclamacao.objects.annotate(num_reclamacoes=Count('atendida')).order_by('-num_reclamacoes')[:10]:
-        reclamacoes.append(p.descricao_problema)
-        qtd_reclamacoes_data.append(p.num_reclamacoes)
-    qtd_reclamacoes.append({
-        "name": "Assuntos",
-        "data": qtd_reclamacoes_data
-    })
-    context["categorias"] = reclamacoes
+    for r in Reclamacao.objects.values('atendida').annotate(num_reclamacoes=Count('atendida')).order_by(
+            '-num_reclamacoes'):
+        qtd_reclamacoes.append({
+            "name": "Atendidas" if r.get("atendida") else "Não Atendidas",
+            "data": r.get("num_reclamacoes")
+        })
     context["conjuntos"] = qtd_reclamacoes
     context["titulo_grafico"] = "TOP 10 Assuntos por Reclamação"
     context["metrica"] = "Reclamações"
     context["labely"] = "Quantidade de Reclamações"
 
-##
-# Reclamações mais atendidas: models.Reclamacao.objects.values('atendida','problema').annotate(num_reclamacoes=Count('atendida')).filter(atendida=True).order_by('-num_reclamacoes')
-# Reclamações mais não atendidas: models.Reclamacao.objects.values('atendida','problema').annotate(num_reclamacoes=Count('atendida')).filter(atendida=False).order_by('-num_reclamacoes')
-##
+    return context

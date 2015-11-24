@@ -11,7 +11,7 @@ class DashboardRequestView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(DashboardRequestView, self).get_context_data(**kwargs)
-        context = relatorios_reclamacoes.relatorio_top_10_assuntos(context)
+        context = relatorios_reclamacoes.relatorio_reclamacoes_empresas_geral_atendidas_e_nao(context)
         return context
 
     @method_decorator(login_required(login_url=reverse_lazy("login")))
