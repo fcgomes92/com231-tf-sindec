@@ -1,0 +1,65 @@
+{% extends "sindec_base/base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+    <link rel="stylesheet" href="{% static "css/datepicker.css" %}" crossorigin="anonymous">
+
+    <div class="container-fluid">
+        <div class="row text-center">
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                <div class="input-group input-daterange">
+                    <span class="input-group-addon">De</span>
+                    <input type="text" class="form-control" id="ano_inicial">
+                    <span class="input-group-addon">até</span>
+                    <input type="text" class="form-control" id="ano_final">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                <button class="btn btn-default" id="btn_gerar_relatorio"
+                        onclick="gerar_relatorio($('#ano_inicial').val(), $('#ano_final').val())">Gerar Relatório
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="col-xs-12 col-sm-12">
+        <div id="chart" style="height: 400px; margin: 0 auto"></div>
+    </div>
+
+    {% include "sindec_components/relatorio_grafico_barra.html" %}
+    {#    {% include "sindec_components/relatorio_grafico_pizza.html" %}#}
+
+    <script src="{% static "js/bootstrap-datepicker.js" %}"></script>
+    <script src="{% static "js/highchart.js" %}"></script>
+    <script src="{% static "js/highchart-export.js" %}"></script>
+    <script src="{% static "js/highchart-more.js" %}"></script>
+    <script type="application/javascript">
+        $('.input-daterange input').each(function () {
+            $(this).datepicker({
+                format: 'yyyy',
+                autoclose: true,
+                minViewMode: "years",
+                maxViewMode: "years"
+            });
+        });
+
+        $("#ano_final").keyup(function (event) {
+            if (event.keyCode == 13) {
+                $("#btn_gerar_relatorio").click();
+            }
+        });
+
+        function gerar_relatorio(ano_inicial, ano_final) {
+
+            var rurl = '{% url "relatorio_reclamacoes_abertas_mes" ano_inicial="0000" ano_final="0001" %}'
+                    .replace('0000', ano_inicial).replace('0001', ano_final);
+            window.location.replace(rurl);
+        }
+
+    </script>
+
+{% endblock %}

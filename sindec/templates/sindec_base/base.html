@@ -6,11 +6,10 @@
 <script src="{% static "js/bootstrap.min.js" %}" crossorigin="anonymous"></script>
 <script src="{% static "js/nuget.js" %}"></script>
 
-
 {% include "sindec_components/navbar.html" %}
 
 
-<main style="margin-top: 75px;">
+<main>
 
     {% block content %}{% endblock %}
 
@@ -45,4 +44,4 @@
     {% endif %}
 </script>
 
-{% include "sindec_base/header.html" %}
+{% include "sindec_base/footer.html" %}

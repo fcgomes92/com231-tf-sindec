@@ -1,5 +1,5 @@
 .logoimg {
-    height: 100px;
+    height: 100%;
     border-radius: 10px;
     border: solid thin black;
     background-color: white;
@@ -8,4 +8,13 @@
     left: 0;
     top: 0;
     position: absolute;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+main {
+    /*margin-top: 5%;*/
 }
