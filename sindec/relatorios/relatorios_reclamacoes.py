@@ -137,7 +137,8 @@ def relatorio_reclamacoes_abertas_por_mes(context, ano_inicial=2009, ano_final=2
     for r in Reclamacao.objects.values('data_abertura').annotate(num_reclamacoes=Count('data_abertura')) \
             .filter(data_abertura__gt=timezone.datetime(year=ano_inicial, month=1, day=1)) \
             .filter(data_abertura__lt=timezone.datetime(year=ano_final, month=12, day=30)):
-        reclamacoes_data[r.get("data_abertura").month - 1] += r.get('num_reclamacoes')
+        if r.get("data_abertura", None) is not None:
+            reclamacoes_data[r.get("data_abertura").month - 1] += r.get('num_reclamacoes')
 
     qtd_reclamacoes.append({
         "name": "Abertura de Reclamações",
@@ -149,7 +150,8 @@ def relatorio_reclamacoes_abertas_por_mes(context, ano_inicial=2009, ano_final=2
     for r in Reclamacao.objects.values('data_fechamento').annotate(num_reclamacoes=Count('data_fechamento')) \
             .filter(data_abertura__gt=timezone.datetime(year=ano_inicial, month=1, day=1)) \
             .filter(data_abertura__lt=timezone.datetime(year=ano_final, month=12, day=30)):
-        reclamacoes_data[r.get("data_fechamento").month - 1] += r.get('num_reclamacoes')
+        if r.get("data_fechamento", ) is not None:
+            reclamacoes_data[r.get("data_fechamento").month - 1] += r.get('num_reclamacoes')
 
     qtd_reclamacoes.append({
         "name": "Fechamento de Reclamações",

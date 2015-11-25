@@ -75,7 +75,7 @@ class Reclamacao(models.Model):
     problema = models.ForeignKey("Problema", null=False, blank=False)
 
     data_abertura = models.DateTimeField(blank=False, null=False)
-    data_fechamento = models.DateTimeField(blank=False, null=False)
+    data_fechamento = models.DateTimeField(blank=True, null=True)
 
     atendida = models.BooleanField(blank=False, null=False)
 

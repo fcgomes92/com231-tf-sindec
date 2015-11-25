@@ -22,3 +22,6 @@ RESET_PASSWORD_CONFIRM = _("Email enviado para {}. Verifique sua caixa de emails
 RESET_PASSWORD_ERR_NO_EMAIL = _('Nenhum usuário encontrado com este email!')
 RESET_PASSWORD_ERR_FORMAT_EMAIL = _('Entrada inválida!')
 RESET_PASSWORD_ERR_SEND_EMAIL = _('Erro de envio de email! Tente novamente mais tarde!')
+
+RECLAMACAO_ADD_SUCC = _("Reclamação adicionada com sucesso!")
+RECLAMACAO_ADD_ERR = _("Reclamação não adicionada! Tente novamente!")

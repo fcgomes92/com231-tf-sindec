@@ -1,0 +1,44 @@
+/* By Felipe */
+.strike {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 2px;
+    background: #536DFE;
+}
+
+.strike-white > span:before,
+.strike-white > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 2px;
+    background: white;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
