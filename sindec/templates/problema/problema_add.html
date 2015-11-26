@@ -1,0 +1,45 @@
+{% extends "sindec_base/base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <link rel="stylesheet" href="{% static "css/strike.css" %}" crossorigin="anonymous">
+
+    <form id="form_problema">
+        {% csrf_token %}
+        <div class="strike">
+            <span style="font-size: large;"><b>Formulário de problema</b></span>
+        </div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label for="input_reclamador_cep">Descrição do problema: </label>
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="text" class="form-control" id="input_problema_descricao" placeholder="Descrição..."
+                               name="problema_descricao" required>
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-primary">Salvar Problema</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <script>
+        $("#form_problema").submit(function (event) {
+            var data = $("#form_problema").serialize();
+            var url = "{% url "problema_add" %}";
+            $.post(url, data, function (data) {
+                window.location.replace("{% url "dashboard" %}");
+            });
+            event.preventDefault();
+        });
+    </script>
+
+{% endblock %}

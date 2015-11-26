@@ -32,3 +32,8 @@ PROBLEMA_ADD_SUCC = _("Problema adicionado com sucesso!")
 PROBLEMA_ADD_ERR = _("Problema não adicionado!")
 PROBLEMA_UPD_SUCC = _("Problema alterado com sucesso!")
 PROBLEMA_UPD_ERR = _("Problema não alterado!")
+
+ASSUNTO_ADD_SUCC = _("Assunto adicionado com sucesso!")
+ASSUNTO_ADD_ERR = _("Assunto não adicionado!")
+ASSUNTO_UPD_SUCC = _("Assunto alterado com sucesso!")
+ASSUNTO_UPD_ERR = _("Assunto não alterado!")

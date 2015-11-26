@@ -1,0 +1,60 @@
+{% extends "sindec_base/base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+    <link rel="stylesheet" href="{% static "css/jquery-ui.min.css" %}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/strike.css" %}" crossorigin="anonymous">
+    <style>
+        .ui-widget {
+            width: 100%;
+            background: white;
+        {#            height: 2em;#}
+        }
+    </style>
+    <form id="form_assunto">
+        {% csrf_token %}
+        <div class="strike">
+            <span style="font-size: large;"><b>Formulário de busca assunto</b></span>
+        </div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="ui-widget">
+                    <div class="col-xs-12">
+                        <label>Assunto: </label>
+                    </div>
+                    <div class="col-xs-12">
+                        <select id="combobox_assuntos" name="assunto_id" required>
+                            <option value="" disabled selected>Escolha um assunto...</option>
+                            {% for p in assuntos %}
+                                <option value="{{ p.pk }}">{{ p.descricao_assunto }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-primary">Alterar Assunto</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="{% static "js/jquery-ui.min.js" %}"></script>
+    <script src="{% static "js/combobox_autocomplete.js" %}"></script>
+    <script>
+        $(function () {
+            $("#combobox_assuntos").combobox();
+        });
+
+        $("#form_assunto").submit(function (event) {
+            var data = $("#form_assunto").serialize();
+            var url = "{% url "assunto_update" 123 %}".replace("123", $("#combobox_assuntos").find(":selected").val());
+            window.location.replace(url);
+            event.preventDefault();
+        });
+    </script>
+
+{% endblock %}
