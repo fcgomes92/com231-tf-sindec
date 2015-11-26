@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df42338f-5574-419f-bb8e-d6b45c532296" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/templates/reclamacao/reclamacao_list.html" afterPath="$PROJECT_DIR$/sindec/templates/reclamacao/reclamacao_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/templatetags/form_css.py" afterPath="$PROJECT_DIR$/sindec/templatetags/form_css.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/urls.py" afterPath="$PROJECT_DIR$/sindec/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/utils/strings.py" afterPath="$PROJECT_DIR$/sindec/utils/strings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/views/reclamacao.py" afterPath="$PROJECT_DIR$/sindec/views/reclamacao.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py" afterPath="$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py" />
     </list>
     <ignored path="tf_com231.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,18 +55,18 @@
           <file leaf-file-name="relatorio_reclamacoes_abertas_por_mes.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_abertas_por_mes.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-10.740741">
-                  <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="69" />
+                <state vertical-scroll-proportion="-12.148149">
+                  <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="reclamacao_list.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="reclamacao_list.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sindec/templates/reclamacao/reclamacao_list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.0604982">
-                  <caret line="334" column="74" selection-start-line="334" selection-start-column="74" selection-end-line="334" selection-end-column="74" />
+                <state vertical-scroll-proportion="-6.0">
+                  <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
                   <folding>
                     <element signature="e#684#709#0#HTML" expanded="true" />
                     <element signature="e#3137#3161#0#HTML" expanded="true" />
@@ -80,6 +75,30 @@
                     <element signature="e#9551#9570#0#HTML" expanded="true" />
                     <element signature="e#9735#9758#0#HTML" expanded="true" />
                     <element signature="e#9798#9823#0#HTML" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="procom.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sindec/views/procom.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="relatorios_reclamacoes.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.3327674">
+                  <caret line="129" column="41" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="41" />
+                  <folding>
+                    <element signature="e#0#55#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -115,21 +134,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_base/base.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-5.3333335">
-                  <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sindec/urls.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+                  <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -252,7 +261,6 @@
         <option value="$PROJECT_DIR$/sindec/templates/sindec_base/header.html" />
         <option value="$PROJECT_DIR$/sindec/static/js/bootstrap-datepicker.ptBR.min.js" />
         <option value="$PROJECT_DIR$/sindec/static/js/combobox_autocomplete.js" />
-        <option value="$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py" />
         <option value="$PROJECT_DIR$/sindec/templates/reclamacao/reclamacao_update.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/138529ae-1193-40a1-8235-c7a3245feb59/console.sql" />
         <option value="$PROJECT_DIR$/sindec/templates/procom/dashboard.html" />
@@ -266,6 +274,7 @@
         <option value="$PROJECT_DIR$/sindec/templatetags/form_css.py" />
         <option value="$PROJECT_DIR$/sindec/views/reclamacao.py" />
         <option value="$PROJECT_DIR$/sindec/templates/reclamacao/reclamacao_list.html" />
+        <option value="$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py" />
       </list>
     </option>
   </component>
@@ -875,26 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/views/procom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="152" column="50" selection-start-line="152" selection-start-column="50" selection-end-line="152" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sindec/static/js/combobox_autocomplete.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.3583426">
@@ -1029,32 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_abertas_por_mes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.740741">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tf_com231/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_base/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.3333335">
@@ -1087,20 +1050,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templatetags/form_css.py">
+    <entry file="file://$PROJECT_DIR$/sindec/templates/reclamacao/reclamacao_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/views/reclamacao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9049236">
-          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding>
-            <element signature="e#0#53#0" expanded="true" />
+            <element signature="e#684#709#0#HTML" expanded="true" />
+            <element signature="e#3137#3161#0#HTML" expanded="true" />
+            <element signature="e#8424#8446#0#HTML" expanded="true" />
+            <element signature="e#9279#9300#0#HTML" expanded="true" />
+            <element signature="e#9551#9570#0#HTML" expanded="true" />
+            <element signature="e#9735#9758#0#HTML" expanded="true" />
+            <element signature="e#9798#9823#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1118,18 +1079,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/reclamacao/reclamacao_list.html">
+    <entry file="file://$PROJECT_DIR$/sindec/templatetags/form_css.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0604982">
-          <caret line="334" column="74" selection-start-line="334" selection-start-column="74" selection-end-line="334" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tf_com231/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_abertas_por_mes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.148149">
+          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
           <folding>
-            <element signature="e#684#709#0#HTML" expanded="true" />
-            <element signature="e#3137#3161#0#HTML" expanded="true" />
-            <element signature="e#8424#8446#0#HTML" expanded="true" />
-            <element signature="e#9279#9300#0#HTML" expanded="true" />
-            <element signature="e#9551#9570#0#HTML" expanded="true" />
-            <element signature="e#9735#9758#0#HTML" expanded="true" />
-            <element signature="e#9798#9823#0#HTML" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/views/procom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/views/reclamacao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9049236">
+          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327674">
+          <caret line="129" column="41" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
