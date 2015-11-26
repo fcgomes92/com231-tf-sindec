@@ -1,16 +1,19 @@
 from django.utils.decorators import method_decorator
 from django.contrib import messages
 from django.core.urlresolvers import reverse_lazy
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, View
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden, HttpResponse
 from django.utils import timezone
 import re
+from rest_framework.renderers import JSONRenderer
 from sindec.models import Empresa, Assunto, Problema, Consumidor, Reclamacao
 from sindec.utils import strings
+from sindec.serializers import ReclamacaoSerializer
 
 
 class ReclamacaoAddRequestView(TemplateView):
+    http_method_names = ["get", "post", ]
     template_name = "reclamacao/reclamacao_add.html"
 
     def get_context_data(self, **kwargs):
@@ -72,6 +75,52 @@ class ReclamacaoAddRequestView(TemplateView):
     @method_decorator(login_required(login_url=reverse_lazy("login")))
     def dispatch(self, request, *args, **kwargs):
         return super(ReclamacaoAddRequestView, self).dispatch(request, *args, **kwargs)
+
+
+class ReclamacaoListRequestView(TemplateView):
+    http_method_names = ["get", ]
+    template_name = "reclamacao/reclamacao_list.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(ReclamacaoListRequestView, self).get_context_data(**kwargs)
+        context["empresas"] = Empresa.objects.all().values('pk', 'razao_social_sindec', 'cnpj')
+        context["assuntos"] = Assunto.objects.all().values('pk', 'descricao_assunto')
+        context["problemas"] = Problema.objects.all().values('pk', 'descricao_problema')
+        context["generos"] = Consumidor.CHOICES_GENDER
+        context["fes"] = Consumidor.CHOICES_FE
+        return context
+
+    @method_decorator(login_required(login_url=reverse_lazy("login")))
+    def dispatch(self, request, *args, **kwargs):
+        return super(ReclamacaoListRequestView, self).dispatch(request, *args, **kwargs)
+
+
+class ReclamacaoSearchRequest(View):
+    http_method_names = ["get", ]
+    form_fields = ['assunto_id', 'reclamador__data_nascimento', 'reclamador__cep__consumidor',
+                   'reclamador__faixa_etaria', 'data_abertura__gte', 'empresa_id', 'reclamador__sexo', 'problema_id',
+                   'data_abertura__lte']
+
+    def get(self, request, *args, **kwargs):
+        filters = dict()
+
+        # pfk = possible filter key / pfv = possible filter value
+        for pfk, pfv in request.GET.items():
+            if pfk in self.form_fields and pfv != "":
+                filters[pfk] = pfv
+
+        print(filters)
+
+        qs = Reclamacao.objects.all().filter(**filters)
+
+        result = JSONRenderer().render(ReclamacaoSerializer(qs, many=True).data)
+        print(result)
+
+        return HttpResponse(content_type="application/json", content=result)
+
+    @method_decorator(login_required(login_url=reverse_lazy("login")))
+    def dispatch(self, request, *args, **kwargs):
+        return super(ReclamacaoSearchRequest, self).dispatch(request, *args, **kwargs)
 
 
 def str_date_to_iso_format(dt="23/06/1992", splt="/"):

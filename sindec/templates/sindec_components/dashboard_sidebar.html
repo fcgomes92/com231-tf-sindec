@@ -5,80 +5,62 @@
         <div class="" id="">
             <ul class="">
                 <li class="">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-haspopup="true"
-                       aria-expanded="false">CNAE<span class="caret"></span></a>
+                    CNAE
                     <ul class="">
                         <li><a href="#">Adicionar CNAE</a></li>
                         <li><a href="#">Alterar CNAE</a></li>
-                        <li role="separator" class="divider"></li>
                         <li><a href="#">Relatórios de CNAE</a></li>
                     </ul>
                 </li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-haspopup="true"
-                       aria-expanded="false">Empresas<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                <li class="">
+                    Empresas
+                    <ul class="">
                         <li><a href="#">Adicionar Empresa</a></li>
                         <li><a href="#">Alterar Empresa</a></li>
-                        <li role="separator" class="divider"></li>
                         <li><a href="#">Relatórios de Empresa</a></li>
                     </ul>
                 </li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-haspopup="true"
-                       aria-expanded="false">Consumidores<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                <li class="">
+                    Consumidores
+                    <ul class="">
                         <li><a href="#">Adicionar Consumidor</a></li>
                         <li><a href="#">Alterar Consumidor</a></li>
-                        <li role="separator" class="divider"></li>
                         <li><a href="#">Relatórios de Consumidor</a></li>
                     </ul>
                 </li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-haspopup="true"
-                       aria-expanded="false">Problemas<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                <li class="">
+                    Problemas
+                    <ul class="">
                         <li><a href="#">Adicionar Problmea</a></li>
                         <li><a href="#">Alterar Problema</a></li>
-                        <li role="separator" class="divider"></li>
                         <li><a href="#">Relatórios de Problema</a></li>
                     </ul>
                 </li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-haspopup="true"
-                       aria-expanded="false">Assuntos<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                <li class="">
+                    Assuntos
+                    <ul class="">
                         <li><a href="#">Adicionar Assunto</a></li>
                         <li><a href="#">Alterar Assunto</a></li>
-                        <li role="separator" class="divider"></li>
                         <li><a href="#">Relatórios de Assunto</a></li>
                     </ul>
                 </li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-haspopup="true"
-                       aria-expanded="false">Reclamações<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Adicionar Reclamação</a></li>
-                        <li><a href="#">Alterar Reclamação</a></li>
-                        <li role="separator" class="divider"></li>
+                <li class="">
+                    Reclamações
+                    <ul class="">
+                        <li><a href="{% url "reclamacao_add" %}">Adicionar Reclamação</a></li>
+                        <li><a href="{% url "reclamacao_list" %}">Alterar Reclamação</a></li>
                         <li><a href="#">Relatórios de Reclamação</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="{% url "logout" %}">
                         <div class="hidden-xs">
-                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                            Logout
                         </div>
                         <div class="hidden-sm hidden-md hidden-lg">
                             Logout
