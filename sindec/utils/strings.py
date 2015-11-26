@@ -37,3 +37,8 @@ ASSUNTO_ADD_SUCC = _("Assunto adicionado com sucesso!")
 ASSUNTO_ADD_ERR = _("Assunto não adicionado!")
 ASSUNTO_UPD_SUCC = _("Assunto alterado com sucesso!")
 ASSUNTO_UPD_ERR = _("Assunto não alterado!")
+
+CNAE_ADD_SUCC = _("CNAE adicionado com sucesso!")
+CNAE_ADD_ERR = _("CNAE não adicionado!")
+CNAE_UPD_SUCC = _("CNAE alterado com sucesso!")
+CNAE_UPD_ERR = _("CNAE não alterado!")

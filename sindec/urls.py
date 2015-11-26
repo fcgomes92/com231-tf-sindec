@@ -6,6 +6,7 @@ from sindec.views import procom as sindec_procom
 from sindec.views import reclamacao as sindec_reclamacao
 from sindec.views import problema as sindec_problema
 from sindec.views import assunto as sindec_assunto
+from sindec.views import cnae as sindec_cnae
 
 urlpatterns = [
     url(r'^csv_init/$', sindec_csv.csv_test, name="dbinti"),
@@ -17,20 +18,32 @@ urlpatterns = [
         sindec_user.PasswordResetConfirmView.as_view(),
         name='reset_password_confirm'),
     url(r'^dashboard/$', sindec_procom.DashboardRequestView.as_view(), name="dashboard"),
+    # URL : Reclamação
     url(r'^reclamacao/add/$', sindec_reclamacao.ReclamacaoAddRequestView.as_view(), name="reclamacao_add"),
     url(r'^reclamacao/list/$', sindec_reclamacao.ReclamacaoListRequestView.as_view(), name="reclamacao_list"),
     url(r'^reclamacao/search/$', sindec_reclamacao.ReclamacaoSearchRequest.as_view(), name="reclamacao_search"),
     url(r'^reclamacao/update/(?P<reclamacao_id>[0-9]+)/(?P<reclamacao_atendida>[0-1])/$',
         sindec_reclamacao.ReclamacaoUpdateRequest.as_view(), name="reclamacao_update"),
+
+    # URL : Problema
     url(r'^problema/add/$', sindec_problema.ProblemaAddRequestView.as_view(), name="problema_add"),
     url(r'^problema/list/$', sindec_problema.ProblemaListRequestView.as_view(), name="problema_list"),
     url(r'^problema/update/(?P<problema_id>[0-9]+)/$',
         sindec_problema.ProblemaUpdateRequestView.as_view(), name="problema_update"),
+
+    # URL : Assunto
     url(r'^assunto/add/$', sindec_assunto.AssuntoAddRequestView.as_view(), name="assunto_add"),
     url(r'^assunto/list/$', sindec_assunto.AssuntoListRequestView.as_view(), name="assunto_list"),
     url(r'^assunto/update/(?P<assunto_id>[0-9]+)/$',
         sindec_assunto.AssuntoUpdateRequestView.as_view(), name="assunto_update"),
 
+    # URL : CNAE
+    url(r'^cnae/add/$', sindec_cnae.CNAEAddRequestView.as_view(), name="cnae_add"),
+    url(r'^cnae/list/$', sindec_cnae.CNAEListRequestView.as_view(), name="cnae_list"),
+    url(r'^cnae/update/(?P<cnae_id>[0-9]+)/$',
+        sindec_cnae.CNAEUpdateRequestView.as_view(), name="cnae_update"),
+
+    # URL : Relatórios
     url(r'^relatorio/reclamacoes/abertas/mes/(?P<ano_inicial>[0-9]{4})/(?P<ano_final>[0-9]{4})/$',
         sindec_procom.RelatorioReclamacoesAbertasPorMesRequestView.as_view(), name="relatorio_reclamacoes_abertas_mes"),
     # url(r'^register/$', sindec_user.RegisterRequestView.as_view(), name="register"),
@@ -42,4 +55,4 @@ urlpatterns = [
 # TODO: CRUD Empresa
 # DONE: CRUD Assunto
 # DONE: CRUD Problema
-# TODO: CRUD CNAE
+# DONE: CRUD CNAE

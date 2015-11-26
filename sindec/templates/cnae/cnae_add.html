@@ -1,0 +1,45 @@
+{% extends "sindec_base/base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <link rel="stylesheet" href="{% static "css/strike.css" %}" crossorigin="anonymous">
+
+    <form id="form_cnae">
+        {% csrf_token %}
+        <div class="strike">
+            <span style="font-size: large;"><b>Formulário de cnae</b></span>
+        </div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label for="input_reclamador_cep">Descrição do cnae: </label>
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="text" class="form-control" id="input_cnae_descricao" placeholder="Descrição..."
+                               name="cnae_descricao" required>
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-primary">Salvar CNAE</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <script>
+        $("#form_cnae").submit(function (event) {
+            var data = $("#form_cnae").serialize();
+            var url = "{% url "cnae_add" %}";
+            $.post(url, data, function (data) {
+                window.location.replace("{% url "dashboard" %}");
+            });
+            event.preventDefault();
+        });
+    </script>
+
+{% endblock %}
