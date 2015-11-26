@@ -50,7 +50,7 @@ class ProblemaUpdateRequestView(TemplateView):
             return HttpResponseRedirect(url=reverse_lazy("dashboard"))
         else:
             context = super(ProblemaUpdateRequestView, self).get_context_data(**kwargs)
-            context["problema"] = Problema.objects.get(int(problema_id))
+            context["problema"] = Problema.objects.get(pk=int(problema_id))
             return context
 
     def post(self, request, problema_id=None, *args, **kwargs):
