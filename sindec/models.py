@@ -91,7 +91,7 @@ class Reclamacao(models.Model):
 
 
 class Assunto(models.Model):
-    codigo_assunto = models.PositiveIntegerField(null=False, blank=False, primary_key=True)
+    codigo_assunto = models.AutoField(null=False, blank=False, primary_key=True)
     descricao_assunto = models.CharField(max_length=128, null=False, blank=False)
 
     last_update = models.DateTimeField()
@@ -105,7 +105,7 @@ class Assunto(models.Model):
 
 
 class Problema(models.Model):
-    codigo_problema = models.PositiveIntegerField(null=False, blank=False, primary_key=True)
+    codigo_problema = models.AutoField(null=False, blank=False, primary_key=True, )
     descricao_problema = models.CharField(max_length=128, null=False, blank=False)
 
     last_update = models.DateTimeField()
@@ -143,7 +143,7 @@ class Empresa(models.Model):
 
 
 class CNAE(models.Model):
-    codigo_cnae = models.PositiveIntegerField(null=False, blank=False, primary_key=True)
+    codigo_cnae = models.AutoField(null=False, blank=False, primary_key=True)
     descricao_cnae = models.CharField(max_length=128, null=False, blank=False)
 
     last_update = models.DateTimeField()

@@ -27,3 +27,8 @@ RECLAMACAO_ADD_SUCC = _("Reclamação adicionada com sucesso!")
 RECLAMACAO_UPD_SUCC = _("Reclamação alterada com sucesso!")
 RECLAMACAO_ADD_ERR = _("Reclamação não adicionada! Tente novamente!")
 RECLAMACAO_UPD_ERR = _("Reclamação não alterada! Tente novamente!")
+
+PROBLEMA_ADD_SUCC = _("Problema adicionado com sucesso!")
+PROBLEMA_ADD_ERR = _("Problema não adicionado!")
+PROBLEMA_UPD_SUCC = _("Problema alterado com sucesso!")
+PROBLEMA_UPD_ERR = _("Problema não alterado!")
