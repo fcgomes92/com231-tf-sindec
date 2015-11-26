@@ -1,3 +1,4 @@
+from django.http.response import HttpResponseRedirect
 from django.utils.decorators import method_decorator
 from django.contrib import messages
 from django.core.urlresolvers import reverse_lazy
@@ -103,18 +104,20 @@ class ReclamacaoSearchRequest(View):
 
     def get(self, request, *args, **kwargs):
         filters = dict()
+        # filters["reclamador_id"] = request.user.pk
 
         # pfk = possible filter key / pfv = possible filter value
         for pfk, pfv in request.GET.items():
             if pfk in self.form_fields and pfv != "":
                 filters[pfk] = pfv
 
-        print(filters)
+        # print(filters)
 
         qs = Reclamacao.objects.all().filter(**filters)
 
         result = JSONRenderer().render(ReclamacaoSerializer(qs, many=True).data)
-        print(result)
+
+        # print(result)
 
         return HttpResponse(content_type="application/json", content=result)
 
@@ -126,3 +129,29 @@ class ReclamacaoSearchRequest(View):
 def str_date_to_iso_format(dt="23/06/1992", splt="/"):
     dt = dt.split(splt)
     return "{}-{}-{}".format(dt[2], dt[1], dt[0])
+
+
+class ReclamacaoUpdateRequest(View):
+    http_method_names = ["post", ]
+
+    def post(self, request, reclamacao_id, reclamacao_atendida, *args, **kwargs):
+        if None not in [reclamacao_id, reclamacao_atendida]:
+            try:
+                r = Reclamacao.objects.get(id=reclamacao_id)
+                r.atendida = bool(int(reclamacao_atendida))
+                r.data_fechamento = timezone.now().isoformat()
+                r.save()
+                messages.add_message(request=request, level=messages.SUCCESS, message=strings.RECLAMACAO_UPD_SUCC)
+                result = HttpResponseRedirect(reverse_lazy("dashboard"))
+            except Reclamacao.DoesNotExist:
+                messages.add_message(request=request, level=messages.ERROR, message=strings.RECLAMACAO_UPD_ERR)
+                result = HttpResponseForbidden()
+        else:
+            messages.add_message(request=request, level=messages.ERROR, message=strings.RECLAMACAO_UPD_ERR)
+            result = HttpResponseForbidden()
+
+        return result
+
+    @method_decorator(login_required(login_url=reverse_lazy("login")))
+    def dispatch(self, request, *args, **kwargs):
+        return super(ReclamacaoUpdateRequest, self).dispatch(request, *args, **kwargs)

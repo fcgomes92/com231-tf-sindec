@@ -5,7 +5,6 @@ from sindec.views import home as sindec_home
 from sindec.views import procom as sindec_procom
 from sindec.views import reclamacao as sindec_reclamacao
 
-
 urlpatterns = [
     url(r'^csv_init/$', sindec_csv.csv_test, name="dbinti"),
     url(r'^$', sindec_home.HomeRequestView.as_view(), name="home"),
@@ -19,6 +18,8 @@ urlpatterns = [
     url(r'^reclamacao/add/$', sindec_reclamacao.ReclamacaoAddRequestView.as_view(), name="reclamacao_add"),
     url(r'^reclamacao/list/$', sindec_reclamacao.ReclamacaoListRequestView.as_view(), name="reclamacao_list"),
     url(r'^reclamacao/search/$', sindec_reclamacao.ReclamacaoSearchRequest.as_view(), name="reclamacao_search"),
+    url(r'^reclamacao/update/(?P<reclamacao_id>[0-9]+)/(?P<reclamacao_atendida>[0-1])/$',
+        sindec_reclamacao.ReclamacaoUpdateRequest.as_view(), name="reclamacao_update"),
 
     url(r'^relatorio/reclamacoes/abertas/mes/(?P<ano_inicial>[0-9]{4})/(?P<ano_final>[0-9]{4})/$',
         sindec_procom.RelatorioReclamacoesAbertasPorMesRequestView.as_view(), name="relatorio_reclamacoes_abertas_mes"),

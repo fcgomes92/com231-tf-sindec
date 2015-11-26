@@ -11,3 +11,8 @@ def add_input_attr(field, attr):
     for i in attr.split(';'):
         values[i.split(':')[0]] = i.split(':')[1]
     return field.as_widget(attrs=values)
+
+
+@register.filter(name='add_id_attr')
+def add_input_attr(field, attr):
+    return field.as_widget(attrs={'id': attr})

@@ -24,4 +24,6 @@ RESET_PASSWORD_ERR_FORMAT_EMAIL = _('Entrada inválida!')
 RESET_PASSWORD_ERR_SEND_EMAIL = _('Erro de envio de email! Tente novamente mais tarde!')
 
 RECLAMACAO_ADD_SUCC = _("Reclamação adicionada com sucesso!")
+RECLAMACAO_UPD_SUCC = _("Reclamação alterada com sucesso!")
 RECLAMACAO_ADD_ERR = _("Reclamação não adicionada! Tente novamente!")
+RECLAMACAO_UPD_ERR = _("Reclamação não alterada! Tente novamente!")
