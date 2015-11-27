@@ -4,14 +4,19 @@
     <h1>Bem-vindo, {{ user.username }}!</h1>
     {% include "sindec_components/dashboard_sidebar.html" %}
 
-{#    <script src="{% static "js/highchart.js" %}"></script>#}
-{#    <script src="{% static "js/highchart-export.js" %}"></script>#}
-{#    <script src="{% static "js/highchart-more.js" %}"></script>#}
+    <link rel="stylesheet" href="{% static "css/datatable.css" %}" crossorigin="anonymous">
+    <script src="{% static "js/datatable.js" %}"></script>
 
-{#    <div class="col-xs-12 col-sm-12">#}
-{#        <div id="chart" style="height: 400px; margin: 0 auto"></div>#}
-{#    </div>#}
+    {% include "sindec_components/data_table.html" with table_id='iddatabela' columns=tcol row_data=trd %}
 
-{#    {% include "sindec_components/relatorio_grafico_barra.html" %}#}
-{#    {% include "sindec_components/relatorio_grafico_pizza.html" %}#}
+    {#    <script src="{% static "js/highchart.js" %}"></script>#}
+    {#    <script src="{% static "js/highchart-export.js" %}"></script>#}
+    {#    <script src="{% static "js/highchart-more.js" %}"></script>#}
+
+    {#    <div class="col-xs-12 col-sm-12">#}
+    {#        <div id="chart" style="height: 400px; margin: 0 auto"></div>#}
+    {#    </div>#}
+
+    {#    {% include "sindec_components/relatorio_grafico_barra.html" %}#}
+    {#    {% include "sindec_components/relatorio_grafico_pizza.html" %}#}
 {% endblock %}

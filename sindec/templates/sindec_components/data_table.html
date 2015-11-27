@@ -1,0 +1,28 @@
+<table id="{{ table_id }}" class="display">
+    <thead>
+    <tr>
+        {% for c in columns %}
+            <th>{{ c }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {#    {% for rd in row_data %}#}
+    {#        <tr>#}
+    {#            {% for rk,rv in rd.items %}#}
+    {#                <td>{{ rk }}</td>#}
+    {#            {% endfor %}#}
+    {#        </tr>#}
+    {#    {% endfor %}#}
+    {% for r in row_data %}
+        <tr>
+            {% for v in r %}
+                <td>{{ v }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<script type="application/javascript">
+    $("#{{ table_id }}").DataTable();
+</script>
