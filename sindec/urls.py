@@ -7,6 +7,7 @@ from sindec.views import reclamacao as sindec_reclamacao
 from sindec.views import problema as sindec_problema
 from sindec.views import assunto as sindec_assunto
 from sindec.views import cnae as sindec_cnae
+from sindec.views import empresa as sindec_empresa
 
 urlpatterns = [
     url(r'^csv_init/$', sindec_csv.csv_test, name="dbinti"),
@@ -42,6 +43,12 @@ urlpatterns = [
     url(r'^cnae/list/$', sindec_cnae.CNAEListRequestView.as_view(), name="cnae_list"),
     url(r'^cnae/update/(?P<cnae_id>[0-9]+)/$',
         sindec_cnae.CNAEUpdateRequestView.as_view(), name="cnae_update"),
+
+    # URL : Empresa
+    url(r'^empresa/add/$', sindec_empresa.EmpresaAddRequestView.as_view(), name="empresa_add"),
+    url(r'^empresa/list/$', sindec_empresa.EmpresaListRequestView.as_view(), name="empresa_list"),
+    url(r'^empresa/update/(?P<empresa_id>[0-9]+)/$',
+        sindec_empresa.EmpresaUpdateRequestView.as_view(), name="empresa_update"),
 
     # URL : Relatórios
     url(r'^relatorio/reclamacoes/abertas/mes/(?P<ano_inicial>[0-9]{4})/(?P<ano_final>[0-9]{4})/$',

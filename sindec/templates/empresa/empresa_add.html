@@ -1,0 +1,132 @@
+{% extends "sindec_base/base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <link rel="stylesheet" href="{% static "css/strike.css" %}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/jquery-ui.min.css" %}" crossorigin="anonymous">
+    <style>
+        .ui-widget {
+            width: 100%;
+            background: white;
+        {#            height: 2em;#}
+        }
+    </style>
+
+    <form id="form_empresa">
+        {% csrf_token %}
+        <div class="strike">
+            <span style="font-size: large;"><b>Formulário de empresa</b></span>
+        </div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label for="input_empresa_razao_social_sindec">Razão Social SINDEC</label>
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="text" class="form-control" id="input_empresa_razao_social_sindec"
+                               placeholder="Razão Social SINDEC..."
+                               name="razao_social_sindec" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label for="input_empresa_nome_fantasia_sindec">Nome Fantasia SINDEC</label>
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="text" class="form-control" id="input_empresa_nome_fantasia_sindec"
+                               placeholder="Nome Fantasia SINDEC"
+                               name="nome_fantasia_sindec">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label for="cb_empresa_pessoa_juridica">Pessoa Jurídica</label>
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="checkbox" class="form-control" id="cb_empresa_pessoa_juridica"
+                               name="pessoa_juridica" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label for="input_empresa_cnpj"></label>
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="number" class="form-control" id="input_empresa_cnpj"
+                               placeholder="CNPJ"
+                               name="cnpj" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label for="input_empresa_razao_social_rfb">Razão Social RFB</label>
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="text" class="form-control" id="input_empresa_empresa_razao_social_rfb"
+                               placeholder="Razão Social RFB..."
+                               name="razao_social_rfb">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label for="input_empresa_nome_fantasia_rfb">Nome Fantasia RFB</label>
+                    </div>
+                    <div class="col-xs-12">
+                        <input type="text" class="form-control" id="input_empresa_nome_fantasia_rfb"
+                               placeholder="Nome Fantasia RFB..."
+                               name="nome_fantasia_rfb">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ui-widget">
+                        <div class="col-xs-12">
+                            <label>CNAE: </label>
+                        </div>
+                        <div class="col-xs-12">
+                            <select id="combobox_cnae" name="cnae_id">
+                                <option value="" disabled selected>Escolha um CNAE...</option>
+                                {% for c in cnaes %}
+                                    <option value="{{ c.pk }}">{{ c.descricao_cnae }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-primary">Salvar Empresa</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <script src="{% static "js/jquery-ui.min.js" %}"></script>
+    <script src="{% static "js/combobox_autocomplete.js" %}"></script>
+
+    <script>
+
+        $(function () {
+            $("#combobox_cnae").combobox();
+        });
+
+        $("#form_empresa").submit(function (event) {
+            var data = $("#form_empresa").serialize();
+            var url = "{% url "empresa_add" %}";
+            $.post(url, data, function (data) {
+                window.location.replace("{% url "dashboard" %}");
+            });
+            event.preventDefault();
+        });
+    </script>
+
+{% endblock %}

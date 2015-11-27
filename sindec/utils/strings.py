@@ -42,3 +42,8 @@ CNAE_ADD_SUCC = _("CNAE adicionado com sucesso!")
 CNAE_ADD_ERR = _("CNAE não adicionado!")
 CNAE_UPD_SUCC = _("CNAE alterado com sucesso!")
 CNAE_UPD_ERR = _("CNAE não alterado!")
+
+EMPRESA_ADD_SUCC = _("Empresa adicionado com sucesso!")
+EMPRESA_ADD_ERR = _("Empresa não adicionado!")
+EMPRESA_UPD_SUCC = _("Empresa alterado com sucesso!")
+EMPRESA_UPD_ERR = _("Empresa não alterado!")

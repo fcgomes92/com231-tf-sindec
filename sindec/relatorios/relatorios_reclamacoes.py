@@ -153,7 +153,7 @@ def relatorio_reclamacoes_abertas_por_mes(context, ano_inicial=2009, ano_final=2
         if r.get("data_fechamento", ) is not None:
             reclamacoes_data[r.get("data_fechamento").month - 1] += r.get('num_reclamacoes')
 
-    print(reclamacoes_data)
+    # print(reclamacoes_data)
 
     qtd_reclamacoes.append({
         "name": "Fechamento de Reclamações",
