@@ -50,9 +50,3 @@ urlpatterns = [
     # url(r'^register/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', sindec_user.RegisterConfirmRequest.as_view(),
     #     name='register_confirm'),
 ]
-
-# DONE: CRUD Reclamação
-# TODO: CRUD Empresa
-# DONE: CRUD Assunto
-# DONE: CRUD Problema
-# DONE: CRUD CNAE
