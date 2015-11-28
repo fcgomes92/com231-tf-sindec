@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df42338f-5574-419f-bb8e-d6b45c532296" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/static/css/datatable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/static/js/datatable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/templates/sindec_components/data_table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/templates/relatorios/relatorio_do_cadastro_nacional_de_reclamacoes_fundamentadas.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_top_10.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sindec/views/relatorio.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py" afterPath="$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/static/css/custom_sindec.css" afterPath="$PROJECT_DIR$/sindec/static/css/custom_sindec.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/templates/procom/dashboard.html" afterPath="$PROJECT_DIR$/sindec/templates/procom/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_abertas_por_mes.html" afterPath="$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_abertas_por_mes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/templates/sindec_base/base.html" afterPath="$PROJECT_DIR$/sindec/templates/sindec_base/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/templates/sindec_components/dashboard_sidebar.html" afterPath="$PROJECT_DIR$/sindec/templates/sindec_components/dashboard_sidebar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/templates/sindec_components/data_table.html" afterPath="$PROJECT_DIR$/sindec/templates/sindec_components/data_table.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/templates/sindec_components/navbar.html" afterPath="$PROJECT_DIR$/sindec/templates/sindec_components/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_barra.html" afterPath="$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_barra.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_pizza.html" afterPath="$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_pizza.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/urls.py" afterPath="$PROJECT_DIR$/sindec/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sindec/views/procom.py" afterPath="$PROJECT_DIR$/sindec/views/procom.py" />
     </list>
     <ignored path="tf_com231.iws" />
@@ -44,20 +56,6 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Sqlite (Xerial) - local_db.sqlite3" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="sindec_empresa" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -68,66 +66,146 @@
     <favorites_list name="tf_com231" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sindec/templates/procom/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0">
-              <caret line="9" column="99" selection-start-line="9" selection-start-column="99" selection-end-line="9" selection-end-column="99" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="procom.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sindec/views/procom.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42329228">
-              <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data_table.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/data_table.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.0">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datatable.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sindec/static/js/datatable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.5409837">
-              <caret line="2722" column="51" selection-start-line="2722" selection-start-column="51" selection-end-line="2722" selection-end-column="51" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_base/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="95" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.41908276">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sindec/templates/procom/dashboard.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-10.740741">
+                  <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="procom.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sindec/views/procom.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sindec/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="data_table.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/data_table.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-7.3333335">
+                  <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+                  <folding>
+                    <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="relatorio.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sindec/views/relatorio.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="10" column="69" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="69" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="relatorio_do_cadastro_nacional_de_reclamacoes_fundamentadas.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sindec/templates/relatorios/relatorio_do_cadastro_nacional_de_reclamacoes_fundamentadas.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.42128602">
+                  <caret line="134" column="0" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="134" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="empresa_add.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sindec/templates/empresa/empresa_add.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-10.666667">
+                  <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#517#542#0#HTML" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="relatorios_empresa.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sindec/relatorios/relatorios_empresa.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="21" column="48" selection-start-line="7" selection-start-column="4" selection-end-line="21" selection-end-column="48" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="relatorio_grafico_barra.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_barra.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-7.3333335">
+                  <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="relatorio_grafico_barra.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_barra.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-9.333333">
+                  <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="relatorios_reclamacoes.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.7868676">
+                  <caret line="374" column="9" selection-start-line="374" selection-start-column="9" selection-end-line="374" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#0#70#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
         <option value="CSS File" />
         <option value="HTML File" />
       </list>
@@ -139,19 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_pizza.html" />
-        <option value="$PROJECT_DIR$/sindec/templates/relatorios.html" />
-        <option value="$PROJECT_DIR$/sindec/static/css/datepicker.css" />
-        <option value="$PROJECT_DIR$/sindec/static/js/bootstrap-datepicker.js" />
-        <option value="$PROJECT_DIR$/sindec/templates/sindec_base/base.html" />
-        <option value="$PROJECT_DIR$/sindec/static/css/custom_sindec.css" />
-        <option value="$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_abertas_por_mes.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f491559a-d9c6-4fbf-b53e-516d576b9408/console.sql" />
-        <option value="$PROJECT_DIR$/sindec/templates/sindec_base/header.html" />
-        <option value="$PROJECT_DIR$/sindec/static/js/bootstrap-datepicker.ptBR.min.js" />
-        <option value="$PROJECT_DIR$/sindec/static/js/combobox_autocomplete.js" />
-        <option value="$PROJECT_DIR$/sindec/templates/reclamacao/reclamacao_update.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/138529ae-1193-40a1-8235-c7a3245feb59/console.sql" />
         <option value="$PROJECT_DIR$/tf_com231/settings.py" />
         <option value="$PROJECT_DIR$/sindec/serializers.py" />
         <option value="$PROJECT_DIR$/sindec/templatetags/form_css.py" />
@@ -171,25 +236,38 @@
         <option value="$PROJECT_DIR$/sindec/templates/cnae/cnae_update.html" />
         <option value="$PROJECT_DIR$/sindec/templates/cnae/cnae_list.html" />
         <option value="$PROJECT_DIR$/sindec/templates/cnae/cnae_add.html" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/sindec/templates/assunto/assunto_add.html" />
         <option value="$PROJECT_DIR$/sindec/utils/strings.py" />
-        <option value="$PROJECT_DIR$/sindec/urls.py" />
         <option value="$PROJECT_DIR$/sindec/templates/empresa/empresa_list.html" />
-        <option value="$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py" />
         <option value="$PROJECT_DIR$/sindec/views/empresa.py" />
         <option value="$PROJECT_DIR$/sindec/templates/empresa/empresa_add.html" />
         <option value="$PROJECT_DIR$/sindec/templates/empresa/empresa_update.html" />
         <option value="$PROJECT_DIR$/TODO" />
-        <option value="$PROJECT_DIR$/sindec/templates/sindec_components/dashboard_sidebar.html" />
-        <option value="$PROJECT_DIR$/sindec/templates/sindec_components/navbar.html" />
         <option value="$PROJECT_DIR$/sindec/static/css/datatable.css" />
-        <option value="$PROJECT_DIR$/sindec/templates/procom/dashboard.html" />
         <option value="$PROJECT_DIR$/sindec/static/js/datatable.js" />
-        <option value="$PROJECT_DIR$/sindec/templates/sindec_components/data_table.html" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/sindec/templates/relatorios/relatorios_dashboard.html" />
+        <option value="$PROJECT_DIR$/sindec/static/css/sindec_custom.html" />
+        <option value="$PROJECT_DIR$/sindec/static/css/sindec-custom.css" />
+        <option value="$PROJECT_DIR$/sindec/templates/sindec_base/header.html" />
+        <option value="$PROJECT_DIR$/sindec/templates/sindec_base/base.html" />
+        <option value="$PROJECT_DIR$/sindec/templates/sindec_components/navbar.html" />
+        <option value="$PROJECT_DIR$/sindec/templates/sindec_components/dashboard_sidebar.html" />
         <option value="$PROJECT_DIR$/sindec/views/procom.py" />
+        <option value="$PROJECT_DIR$/sindec/static/css/custom_sindec.css" />
+        <option value="$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_abertas_por_mes.html" />
+        <option value="$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_top_10.html" />
+        <option value="$PROJECT_DIR$/sindec/views/relatorio.py" />
+        <option value="$PROJECT_DIR$/sindec/urls.py" />
+        <option value="$PROJECT_DIR$/sindec/templates/procom/dashboard.html" />
+        <option value="$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_barra.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/138529ae-1193-40a1-8235-c7a3245feb59/console.sql" />
+        <option value="$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_pizza.html" />
+        <option value="$PROJECT_DIR$/sindec/templates/sindec_components/data_table.html" />
+        <option value="$PROJECT_DIR$/sindec/templates/relatorios/relatorio_do_cadastro_nacional_de_reclamacoes_fundamentadas.html" />
+        <option value="$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py" />
       </list>
     </option>
   </component>
@@ -199,10 +277,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1920" />
-    <option name="y" value="27" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="x" value="1919" />
+    <option name="y" value="-4" />
+    <option name="width" value="1922" />
+    <option name="height" value="1085" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -248,6 +326,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,14 +432,140 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="relatorios" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sindec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reclamacao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sindec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="procom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sindec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sindec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sindec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tf_com231" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sindec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="relatorios" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,7 +575,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../utyl/dados_imobiliarios" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="procom.p&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/views/procom.py&#10;hea&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/header.html&#10;dash&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/procom/dashboard.html&#10;side&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components/dashboard_sidebar.html&#10;nav&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components/navbar.html&#10;models&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/models.py&#10;urls&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/urls.py&#10;empresa.py&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/views/empresa.py&#10;empresa_list&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/empresa/empresa_list.html&#10;reclama&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/reclamacao/reclamacao_add.html&#10;mo&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/models.py&#10;strings&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/utils/strings.py&#10;messagemodels&#9;null&#9;null&#10;sideba&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components/dashboard_sidebar.html&#10;problema_lis&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/problema/problema_list.html&#10;url&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/urls.py&#10;settings&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/tf_com231/settings.py&#10;ser&#9;FILE&#9;file:///usr/lib/python3.5/site-packages/rest_framework/serializers.py&#10;modes&#9;null&#9;null&#10;base&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/base.html&#10;admin&#9;null&#9;null&#10;string&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/utils/strings.py&#10;strin&#9;FILE&#9;file:///usr/lib/python3.5/site-packages/users/utils/strings.py&#10;header&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/header.html&#10;he&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/header.html&#10;head&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/header.html&#10;heade&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/header.html&#10;settin&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/tf_com231/settings.py" />
+    <property name="SearchEverywhereHistoryKey" value="data&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/static/css/datatable.css&#10;empresa_a&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/empresa/empresa_add.html&#10;urls&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/urls.py&#10;models&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/models.py&#10;custom&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/static/css/custom_sindec.css&#10;home&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/views/home.py&#10;das&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/procom/dashboard.html&#10;custo&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/static/css/custom_sindec.css&#10;base&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/base.html&#10;hea&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/header.html&#10;dashbo&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components/dashboard_sidebar.html&#10;nav&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components/navbar.html&#10;reclamaco&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/relatorios/relatorios_reclamacoes.py&#10;reclama&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/relatorios/relatorios_reclamacoes.py&#10;procom.p&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/views/procom.py&#10;dash&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/procom/dashboard.html&#10;side&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components/dashboard_sidebar.html&#10;empresa.py&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/views/empresa.py&#10;empresa_list&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/empresa/empresa_list.html&#10;mo&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/models.py&#10;strings&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/utils/strings.py&#10;messagemodels&#9;null&#9;null&#10;sideba&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components/dashboard_sidebar.html&#10;problema_lis&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/problema/problema_list.html&#10;url&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/urls.py&#10;settings&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/tf_com231/settings.py&#10;ser&#9;FILE&#9;file:///usr/lib/python3.5/site-packages/rest_framework/serializers.py&#10;modes&#9;null&#9;null&#10;admin&#9;null&#9;null&#10;string&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/utils/strings.py&#10;strin&#9;FILE&#9;file:///usr/lib/python3.5/site-packages/users/utils/strings.py&#10;header&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/header.html&#10;he&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/header.html&#10;head&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/header.html&#10;heade&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base/header.html&#10;settin&#9;FILE&#9;file:///home/gomes/dados/development/workspaces/unifei/com231/tf_com231/tf_com231/settings.py" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -655,28 +861,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="1919" y="-4" width="1922" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2521097" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2509225" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46045503" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5084388" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49156117" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5084388" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.49156117" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.49419832" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49525318" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.49525318" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49419832" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46045503" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -735,147 +941,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sindec/templates/reclamacao/reclamacao_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <element signature="e#684#709#0#HTML" expanded="false" />
-            <element signature="e#3137#3161#0#HTML" expanded="false" />
-            <element signature="e#8424#8446#0#HTML" expanded="false" />
-            <element signature="e#9279#9300#0#HTML" expanded="false" />
-            <element signature="e#9551#9570#0#HTML" expanded="false" />
-            <element signature="e#9735#9758#0#HTML" expanded="false" />
-            <element signature="e#9798#9823#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e4c69475/138529ae-1193-40a1-8235-c7a3245feb59/sindec_reclamacao">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templatetags/form_css.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45840406">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tf_com231/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3022071">
-          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_abertas_por_mes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.148149">
-          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e4c69475/138529ae-1193-40a1-8235-c7a3245feb59/sindec_problema">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/static/js/Chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="765" column="15" selection-start-line="765" selection-start-column="15" selection-end-line="765" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/problema/problema_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.074074">
-          <caret line="47" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="14" />
-          <folding>
-            <element signature="e#518#543#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/problema/problema_update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4074073">
-          <caret line="11" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="14" />
-          <folding>
-            <element signature="e#273#298#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/problema/problema_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17888199">
-          <caret line="8" column="69" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e4c69475/138529ae-1193-40a1-8235-c7a3245feb59/sindec_assunto">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/views/assunto.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28219485">
-          <caret line="14" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/cnae/cnae_update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46335405">
-          <caret line="27" column="74" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="74" />
-          <folding>
-            <element signature="e#269#294#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/cnae/cnae_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33291924">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="e#514#539#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37849945">
@@ -911,30 +976,20 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8667413">
-          <caret line="43" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.225806">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -966,7 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71780515">
           <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -983,16 +1037,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/views/home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,27 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/relatorios/relatorios_empresa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33293268">
-          <caret line="102" column="50" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1044,22 +1069,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="77" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sindec/views/reclamacao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="111" selection-end-column="34" />
           <folding>
-            <element signature="e#0#53#0" expanded="true" />
+            <element signature="e#0#53#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1068,14 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48896435">
-          <caret line="132" column="42" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1093,30 +1100,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="86" column="65" selection-start-line="86" selection-start-column="65" selection-end-line="86" selection-end-column="65" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e4c69475/138529ae-1193-40a1-8235-c7a3245feb59/sindec_empresa">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/empresa/empresa_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.519573">
-          <caret line="122" column="54" selection-start-line="122" selection-start-column="54" selection-end-line="122" selection-end-column="54" />
-          <folding>
-            <element signature="e#517#542#0#HTML" expanded="false" />
+            <element signature="e#0#58#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1133,73 +1117,409 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/navbar.html">
+    <entry file="file://$PROJECT_DIR$/sindec/templates/reclamacao/reclamacao_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2551963">
-          <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.08314088">
+          <caret line="292" column="32" selection-start-line="292" selection-start-column="32" selection-end-line="292" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/static/css/datatable.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4157044">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/sindec/static/img/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/138529ae-1193-40a1-8235-c7a3245feb59">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>138529ae-1193-40a1-8235-c7a3245feb59</OriginalElement>
+          <nodes>
+            <node x="86.375" y="430.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:django_content_type</node>
+            <node x="580.5" y="800.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_group</node>
+            <node x="143.26842105263154" y="1110.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user_user_permissions</node>
+            <node x="497.0" y="1355.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sqlite_sequence</node>
+            <node x="830.75" y="788.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_problema</node>
+            <node x="517.2592105263159" y="298.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user</node>
+            <node x="226.0" y="1355.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:django_session</node>
+            <node x="1077.5809210526315" y="0.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_endereco</node>
+            <node x="1380.5092105263157" y="1014.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_reclamacao</node>
+            <node x="1807.25" y="788.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_assunto</node>
+            <node x="0.0" y="776.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_permission</node>
+            <node x="688.25" y="1110.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user_groups</node>
+            <node x="1392.75" y="716.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_empresa</node>
+            <node x="1135.75" y="788.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_procom</node>
+            <node x="1419.25" y="430.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_cnae</node>
+            <node x="201.0" y="728.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:django_admin_log</node>
+            <node x="0.0" y="1355.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:django_migrations</node>
+            <node x="1686.25" y="394.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_consumidor</node>
+            <node x="458.25" y="1110.0">138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_group_permissions</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user_user_permissions" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user">
+              <point x="63.25" y="-52.0" />
+              <point x="333.01842105263154" y="994.0" />
+              <point x="472.50000000000006" y="994.0" />
+              <point x="472.50000000000006" y="696.0" />
+              <point x="660.1342105263159" y="696.0" />
+              <point x="-47.625" y="184.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_reclamacao" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_problema">
+              <point x="-128.4000000000001" y="-148.0" />
+              <point x="1412.6092105263156" y="994.0" />
+              <point x="973.25" y="994.0" />
+              <point x="0.0" y="52.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_empresa" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_cnae">
+              <point x="0.0" y="-124.0" />
+              <point x="0.0" y="52.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user_user_permissions" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_permission">
+              <point x="-63.25" y="-52.0" />
+              <point x="206.51842105263154" y="994.0" />
+              <point x="45.25" y="994.0" />
+              <point x="-45.25" y="64.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_consumidor" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_endereco">
+              <point x="0.0" y="-88.0" />
+              <point x="1796.75" y="273.0" />
+              <point x="1288.3309210526315" y="273.0" />
+              <point x="70.25" y="124.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_permission" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:django_content_type">
+              <point x="0.0" y="-64.0" />
+              <point x="90.5" y="696.0" />
+              <point x="132.375" y="696.0" />
+              <point x="-46.0" y="52.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_group_permissions" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_permission">
+              <point x="-52.5" y="-52.0" />
+              <point x="510.75" y="984.0" />
+              <point x="135.75" y="984.0" />
+              <point x="45.25" y="64.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user_groups" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_group">
+              <point x="-44.0" y="-52.0" />
+              <point x="732.25" y="994.0" />
+              <point x="686.25" y="994.0" />
+              <point x="35.25" y="40.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user_groups" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user">
+              <point x="44.0" y="-52.0" />
+              <point x="820.25" y="696.0" />
+              <point x="755.3842105263159" y="696.0" />
+              <point x="47.625" y="184.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_group_permissions" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_group">
+              <point x="52.5" y="-52.0" />
+              <point x="-35.25" y="40.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_reclamacao" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_consumidor">
+              <point x="64.20000000000005" y="-148.0" />
+              <point x="1605.209210526316" y="984.0" />
+              <point x="1796.75" y="984.0" />
+              <point x="0.0" y="88.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_procom" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user">
+              <point x="0.0" y="-52.0" />
+              <point x="1254.25" y="696.0" />
+              <point x="850.6342105263159" y="696.0" />
+              <point x="142.875" y="184.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:django_admin_log" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:django_content_type">
+              <point x="-65.25" y="-112.0" />
+              <point x="266.25" y="696.0" />
+              <point x="224.375" y="696.0" />
+              <point x="46.0" y="52.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_endereco">
+              <point x="0.0" y="-184.0" />
+              <point x="707.7592105263159" y="273.0" />
+              <point x="1147.8309210526315" y="273.0" />
+              <point x="-70.25" y="124.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_reclamacao" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_assunto">
+              <point x="128.4000000000001" y="-148.0" />
+              <point x="1669.4092105263157" y="994.0" />
+              <point x="1943.75" y="994.0" />
+              <point x="0.0" y="52.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_reclamacao" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_procom">
+              <point x="-64.20000000000005" y="-148.0" />
+              <point x="1476.8092105263158" y="984.0" />
+              <point x="1254.25" y="984.0" />
+              <point x="0.0" y="52.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:django_admin_log" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_user">
+              <point x="65.25" y="-112.0" />
+              <point x="396.75" y="686.0" />
+              <point x="564.8842105263159" y="686.0" />
+              <point x="-142.875" y="184.0" />
+            </edge>
+            <edge source="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_reclamacao" target="138529ae-1193-40a1-8235-c7a3245feb59.TABLE:sindec_empresa">
+              <point x="0.0" y="-148.0" />
+              <point x="1541.0092105263157" y="994.0" />
+              <point x="1542.75" y="994.0" />
+              <point x="0.0" y="124.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.37391882900864937" x="-214.0" y="552.0" />
+          <SelectedNodes>
+            <node>138529ae-1193-40a1-8235-c7a3245feb59.TABLE:auth_group_permissions</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/dashboard_sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45727482">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+    <entry file="dbDummy://dbtable:/e4c69475/138529ae-1193-40a1-8235-c7a3245feb59/sindec_empresa">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_base/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="95" />
+        <state vertical-scroll-proportion="0.05986696">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/static/js/datatable.js">
+    <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_base/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5409837">
-          <caret line="2722" column="51" selection-start-line="2722" selection-start-column="51" selection-end-line="2722" selection-end-column="51" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/procom/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="9" column="99" selection-start-line="9" selection-start-column="99" selection-end-line="9" selection-end-column="99" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/data_table.html">
+    <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_base/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3333335">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/dashboard_sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-36.666668">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3333334">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/views/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/static/css/custom_sindec.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.0">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sindec/views/procom.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42329228">
-          <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e4c69475/138529ae-1193-40a1-8235-c7a3245feb59/sindec_reclamacao">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_abertas_por_mes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.666667">
+          <caret line="40" column="164" selection-start-line="38" selection-start-column="8" selection-end-line="40" selection-end-column="164" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/relatorios/relatorio_reclamacoes_top_10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3333334">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding>
+            <element signature="e#3299#3336#0#HTML" expanded="true" />
+            <element signature="e#5096#5133#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="6" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/relatorios/relatorios_empresa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="48" selection-start-line="7" selection-start-column="4" selection-end-line="21" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/procom/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.740741">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/138529ae-1193-40a1-8235-c7a3245feb59/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15410958">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/empresa/empresa_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#517#542#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_pizza.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.039911307">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/views/relatorio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="69" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/static/js/datatable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12557603">
+          <caret line="1818" column="32" selection-start-line="1818" selection-start-column="32" selection-end-line="1818" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/static/css/datatable.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37804878">
+          <caret line="209" column="21" selection-start-line="209" selection-start-column="18" selection-end-line="209" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/data_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3333335">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/sindec_components/relatorio_grafico_barra.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333">
+          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/templates/relatorios/relatorio_do_cadastro_nacional_de_reclamacoes_fundamentadas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42128602">
+          <caret line="134" column="0" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sindec/relatorios/relatorios_reclamacoes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7868676">
+          <caret line="374" column="9" selection-start-line="374" selection-start-column="9" selection-end-line="374" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -15,6 +15,20 @@
     margin-right: 0;
 }
 
+@media print {
+    .noprint {
+        display: none;
+    }
+    .yesprint{
+        display: block;
+    }
+}
+
+@page {
+    size: auto;   /* auto is the initial value */
+    margin: 1%;  /* this affects the margin in the printer settings */
+}
+
 main {
     /*margin-top: 5%;*/
 }

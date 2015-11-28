@@ -1,0 +1,162 @@
+{% extends "sindec_base/base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+    <link rel="stylesheet" href="{% static "css/datepicker.css" %}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/strike.css" %}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/datatable.css" %}" crossorigin="anonymous">
+    <script src="{% static "js/datatable.js" %}"></script>
+    <script src="{% static "js/bootstrap-datepicker.js" %}"></script>
+    <script src="{% static "js/highchart.js" %}"></script>
+    <script src="{% static "js/highchart-export.js" %}"></script>
+    <script src="{% static "js/highchart-more.js" %}"></script>
+
+    <div class="container-fluid text-center">
+        <h3 class="list-group-item-heading strike">
+                        <span>
+                            Relatório do Cadastro Nacional de Reclamações Fundamentadas de {{ ano }}
+                        </span>
+        </h3>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                <ul class="list-group">
+                    <li class="list-group-item noprint">
+                        <div class="row text-center">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                                <div class="input-group input-daterange">
+                                    <input type="text" class="form-control" id="ano_geral">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 noprint">
+                <button class="btn btn-default" id="btn_gerar_relatorio"
+                        onclick="gerar_relatorio($('#ano_geral').val())">Gerar Relatório
+                </button>
+            </div>
+        </div>
+
+        <br/>
+
+        {#        CNAE#}
+        <h4 class="strike"><span>Cadastro Nacional de Reclamações Fundamentadas {{ ano }}, por CNAE</span></h4>
+
+        <p>
+            O Cadastro Nacional de Reclamações Fundamentadas {{ ano }} contém <b>{{ reclamacoes|length }}</b>
+            reclamações contra mais de {{ fornecedores|length }} fornecedores. O gráfico abaixo apresenta
+            a relação de áreas de empresas (CNAE) mais reclamadas pelo consumidor.
+        </p>
+
+        <br/>
+
+        {% include "sindec_components/relatorio_grafico_barra.html" with chart_id="grafico_cnae"  titulo_grafico=titulo_grafico_cnae subtitulo_grafico=subtitulo_grafico_cnae categorias=categorias_cnae labely=labely_cnae metrica=metrica_cnae conjuntos=conjuntos_cnae %}
+
+        <h4>TOP 100 CNAE mais reclamados de {{ ano }}</h4>
+        {% include "sindec_components/data_table.html" with table_id='tabela_cnae_top_100' columns=colunas_cnae row_data=data_row_cnae %}
+
+        {#        Assuntos#}
+        <br/><br/>
+        <h4 class="strike"><span>Cadastro Nacional de Reclamações Fundamentadas {{ ano }}, por Assuntos</span></h4>
+
+        <p>
+            Os 10 Assuntos mais reclamados em {{ ano }}.
+        </p>
+
+        {% include "sindec_components/relatorio_grafico_barra.html" with chart_id="grafico_assunto"  titulo_grafico=titulo_grafico_assunto subtitulo_grafico=subtitulo_grafico_assunto categorias=categorias_assunto labely=labely_assunto metrica=metrica_assunto conjuntos=conjuntos_assunto %}
+
+        <br/>
+
+        <h4>TOP 100 Assuntos mais reclamados de {{ ano }}</h4>
+        {% include "sindec_components/data_table.html" with table_id='tabela_assunto_top_100' columns=colunas_assunto row_data=data_row_assunto %}
+
+        {#        Problemas#}
+        <br/><br/>
+        <h4 class="strike"><span>Cadastro Nacional de Reclamações Fundamentadas {{ ano }}, por Problemas</span></h4>
+
+        <p>
+            Os 10 Problemas mais enfrentados em {{ ano }}.
+        </p>
+
+        <br/>
+
+        {% include "sindec_components/relatorio_grafico_barra.html" with chart_id="grafico_problema"  titulo_grafico=titulo_grafico_problema subtitulo_grafico=subtitulo_grafico_problema categorias=categorias_problema labely=labely_problema metrica=metrica_problema conjuntos=conjuntos_problema %}
+
+        <br/>
+
+        <h4>
+            Os 100 Problemas mais enfrentados em {{ ano }}.
+        </h4>
+
+        {% include "sindec_components/data_table.html" with table_id='tabela_problema_top_100' columns=colunas_problema row_data=data_row_problema %}
+
+        {#        Reclamações Atendidas x Não Atendidas#}
+        <br/><br/>
+        <h4 class="strike"><span>Reclamações Atendidas x Reclamações Não Atendidas</span></h4>
+
+        <p>
+            Do total de {{ reclamacoes.len }} reclamações registradas pelos
+            Procons, {{ reclamacoes_atendidas_pcnt }} das Reclamações
+            Fundamentadas foram atendidas pelos fornecedores e {{ reclamacoes_nao_atendidas_pcnt }} não foram
+            atendidas, como
+            mostra o gráfico a seguir.
+        </p>
+
+        <br/>
+
+        {% include "sindec_components/relatorio_grafico_pizza.html" with chart_id="grafico_assuntos" titulo_grafico=titulo_grafico_rana labely=labely_rana conjuntos=conjuntos_rana %}
+
+        {#        Mais Atendem#}
+        <br/><br/>
+        <h4 class="strike">
+            <span>
+                Ranking dos 100 Fornecedores que mais atenderam aos Consumidores em {{ ano }}
+            </span>
+        </h4>
+
+        <div class="text-center">
+            {% include "sindec_components/data_table.html" with table_id='tabela_fmaisa_top_100' columns=colunas_fmaisa row_data=data_row_fmaisa %}
+        </div>
+
+        {#        Menos atendem#}
+        <br/><br/>
+        <h4 class="strike"><span>Ranking dos 100 Fornecedores que menos atenderam aos Consumidores em {{ ano }}</span>
+        </h4>
+
+        {% include "sindec_components/data_table.html" with table_id='tabela_fmenosa_top_100' columns=colunas_fmenosa row_data=data_row_fmenosa %}
+
+        {#        Atendimento geral#}
+        <br/><br/>
+        <h4 class="strike"><span>Ranking dos 100 Fornecedores mais reclamados em {{ ano }}</span></h4>
+        
+        {% include "sindec_components/data_table.html" with table_id='tabela_fmr_top_100' columns=colunas_fmr row_data=data_row_fmr %}
+
+    </div>
+    <script type="application/javascript">
+        $('.input-daterange input').each(function () {
+            $(this).datepicker({
+                format: 'yyyy',
+                autoclose: true,
+                minViewMode: "years",
+                maxViewMode: "years"
+            });
+        });
+
+        $("#ano_final").keyup(function (event) {
+            if (event.keyCode == 13) {
+                $("#btn_gerar_relatorio").click();
+            }
+        });
+
+        function gerar_relatorio(ano) {
+
+            var rurl = '{% url "relatorio_geral" ano="0000" %}'
+                    .replace('0000', ano);
+            window.location.replace(rurl);
+        }
+
+    </script>
+
+{% endblock %}

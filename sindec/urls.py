@@ -8,6 +8,7 @@ from sindec.views import problema as sindec_problema
 from sindec.views import assunto as sindec_assunto
 from sindec.views import cnae as sindec_cnae
 from sindec.views import empresa as sindec_empresa
+from sindec.views import relatorio as sindec_relatorio
 
 urlpatterns = [
     url(r'^csv_init/$', sindec_csv.csv_test, name="dbinti"),
@@ -52,7 +53,14 @@ urlpatterns = [
 
     # URL : Relatórios
     url(r'^relatorio/reclamacoes/abertas/mes/(?P<ano_inicial>[0-9]{4})/(?P<ano_final>[0-9]{4})/$',
-        sindec_procom.RelatorioReclamacoesAbertasPorMesRequestView.as_view(), name="relatorio_reclamacoes_abertas_mes"),
+        sindec_relatorio.RelatorioReclamacoesAbertasPorMesRequestView.as_view(),
+        name="relatorio_reclamacoes_abertas_mes"),
+    url(r'^relatorio/reclamacoes/top10/(?P<ano_inicial>[0-9]{4})/(?P<ano_final>[0-9]{4})/$',
+        sindec_relatorio.RelatorioReclamacoesAbertasPorMesRequestView.as_view(),
+        name="relatorio_reclamacoes_abertas_mes"),
+    url(r'^relatorio/geral/(?P<ano>[0-9]{4})/$',
+        sindec_relatorio.RelatorioDoCadastroNacionalDeReclamacoesFundamentadasRequestView.as_view(),
+        name="relatorio_geral"),
     # url(r'^register/$', sindec_user.RegisterRequestView.as_view(), name="register"),
     # url(r'^register/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', sindec_user.RegisterConfirmRequest.as_view(),
     #     name='register_confirm'),

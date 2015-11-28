@@ -1,22 +1,16 @@
-<table id="{{ table_id }}" class="display">
+<table id="{{ table_id }}" class="display text-center dt-center" style="text-align: center;">
     <thead>
     <tr>
         {% for c in columns %}
-            <th>{{ c }}</th>
+            <th class="dt-center">{{ c }}</th>
         {% endfor %}
     </tr>
     </thead>
     <tbody>
-    {#    {% for rd in row_data %}#}
-    {#        <tr>#}
-    {#            {% for rk,rv in rd.items %}#}
-    {#                <td>{{ rk }}</td>#}
-    {#            {% endfor %}#}
-    {#        </tr>#}
-    {#    {% endfor %}#}
     {% for r in row_data %}
         <tr>
-            {% for v in r %}
+            <th class="dt-center">{{ r.name }}</th>
+            {% for v in r.data %}
                 <td>{{ v }}</td>
             {% endfor %}
         </tr>

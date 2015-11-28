@@ -1,66 +1,57 @@
 {% load staticfiles %}
 {% url "dashboard" as url_dashboard %}
 {% if request.get_full_path == url_dashboard %}
-    <div class="container-fluid">
-        <div class="" id="">
-            <ul class="">
-                <li class="">
-                    CNAE
-                    <ul class="">
-                        <li><a href="{% url "cnae_add" %}">Adicionar CNAE</a></li>
-                        <li><a href="{% url "cnae_list" %}">Alterar CNAE</a></li>
-                        <li><a href="#">Relatórios de CNAE</a></li>
-                    </ul>
-                </li>
-
-                <li class="">
-                    Empresas
-                    <ul class="">
-                        <li><a href="{% url "empresa_add" %}">Adicionar Empresa</a></li>
-                        <li><a href="{% url "empresa_list" %}">Alterar Empresa</a></li>
-                        <li><a href="#">Relatórios de Empresa</a></li>
-                    </ul>
-                </li>
-
-                <li class="">
-                    Problemas
-                    <ul class="">
-                        <li><a href="{% url "problema_add" %}">Adicionar Problmea</a></li>
-                        <li><a href="{% url "problema_list" %}">Alterar Problema</a></li>
-                        <li><a href="#">Relatórios de Problema</a></li>
-                    </ul>
-                </li>
-
-                <li class="">
-                    Assuntos
-                    <ul class="">
-                        <li><a href="{% url "assunto_add" %}">Adicionar Assunto</a></li>
-                        <li><a href="{% url "assunto_list" %}">Alterar Assunto</a></li>
-                        <li><a href="#">Relatórios de Assunto</a></li>
-                    </ul>
-                </li>
-
-                <li class="">
-                    Reclamações
-                    <ul class="">
-                        <li><a href="{% url "reclamacao_add" %}">Adicionar Reclamação</a></li>
-                        <li><a href="{% url "reclamacao_list" %}">Alterar Reclamação</a></li>
-                        <li><a href="#">Relatórios de Reclamação</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="{% url "logout" %}">
-                        <div class="hidden-xs">
-                            Logout
-                        </div>
-                        <div class="hidden-sm hidden-md hidden-lg">
-                            Logout
-                        </div>
-                    </a>
-                </li>
-                {% else %}
-                <li><a href="{% url "login" %}">Login</a></li>
-
+    <ul class="list-group noprint">
+        <li class="list-group-item">
+            CNAE
+            <ul>
+                <li><a href="{% url "cnae_add" %}">Adicionar CNAE</a></li>
+                <li><a href="{% url "cnae_list" %}">Alterar CNAE</a></li>
             </ul>
-        </div><!-- /.navbar-collapse -->
+        </li>
+
+        <li class="list-group-item">
+            Empresas
+            <ul>
+                <li><a href="{% url "empresa_add" %}">Adicionar Empresa</a></li>
+                <li><a href="{% url "empresa_list" %}">Alterar Empresa</a></li>
+            </ul>
+        </li>
+
+        <li class="list-group-item">
+            Problemas
+            <ul>
+                <li><a href="{% url "problema_add" %}">Adicionar Problmea</a></li>
+                <li><a href="{% url "problema_list" %}">Alterar Problema</a></li>
+            </ul>
+        </li>
+
+        <li class="list-group-item">
+            Assuntos
+            <ul>
+                <li><a href="{% url "assunto_add" %}">Adicionar Assunto</a></li>
+                <li><a href="{% url "assunto_list" %}">Alterar Assunto</a></li>
+            </ul>
+        </li>
+
+        <li class="list-group-item">
+            Reclamações
+            <ul>
+                <li><a href="{% url "reclamacao_add" %}">Adicionar Reclamação</a></li>
+                <li><a href="{% url "reclamacao_list" %}">Alterar Reclamação</a></li>
+            </ul>
+        </li>
+        <li class="list-group-item">
+            <a href="{% url "logout" %}">
+                <div class="hidden-xs">
+                    Logout
+                </div>
+                <div class="hidden-sm hidden-md hidden-lg">
+                    Logout
+                </div>
+            </a>
+        </li>
+        {% else %}
+        <li><a href="{% url "login" %}">Login</a></li>
+    </ul>
 {% endif %}
