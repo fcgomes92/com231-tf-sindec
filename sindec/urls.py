@@ -61,6 +61,8 @@ urlpatterns = [
     url(r'^relatorio/geral/(?P<ano>[0-9]{4})/$',
         sindec_relatorio.RelatorioDoCadastroNacionalDeReclamacoesFundamentadasRequestView.as_view(),
         name="relatorio_geral"),
+    url(r'^relatorio/reclamacoes/consumidor/(?P<ano>[0-9]{4})/$',
+        sindec_relatorio.RelatorioReclamacoesPorDadosReclamadorRequestView.as_view(), name="relatorio_rpr"),
     # url(r'^register/$', sindec_user.RegisterRequestView.as_view(), name="register"),
     # url(r'^register/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', sindec_user.RegisterConfirmRequest.as_view(),
     #     name='register_confirm'),

@@ -5,7 +5,6 @@ from sindec.util import strings as sindec_strings
 
 
 class User(AbstractUser):
-    endereco = models.OneToOneField("Endereco", null=True, blank=True)
     timestamp = models.DateTimeField(blank=False, null=False)
     last_update = models.DateTimeField(blank=False, null=False)
 
@@ -43,6 +42,7 @@ class Consumidor(models.Model):
     )
 
     CHOICES_FE = (
+        (0, "Não se aplica"),
         (1, "até 20 anos"),
         (2, "entre 21 e 30 anos"),
         (3, "entre 31 e 40 anos"),
@@ -51,14 +51,12 @@ class Consumidor(models.Model):
         (6, "entre 61 e 70 anos"),
         (7, "mais de 70 anos"),
         (8, "Nao Informada"),
-        (0, "Não se aplica"),
     )
 
     sexo = models.CharField(max_length=1, null=False, blank=False, choices=CHOICES_GENDER)
     data_nascimento = models.DateField(null=True, blank=True)
     faixa_etaria = models.IntegerField(null=True, blank=True, choices=CHOICES_FE)
     cep_consumidor = models.PositiveIntegerField(null=True, blank=True)
-    endereco = models.OneToOneField("Endereco", null=True, blank=True)
 
     class Meta:
         app_label = sindec_strings.APP_NAME
@@ -92,7 +90,7 @@ class Reclamacao(models.Model):
 
 class Assunto(models.Model):
     codigo_assunto = models.AutoField(null=False, blank=False, primary_key=True)
-    descricao_assunto = models.CharField(max_length=128, null=False, blank=False)
+    descricao_assunto = models.CharField(max_length=256, null=False, blank=False)
 
     last_update = models.DateTimeField()
 
@@ -106,7 +104,7 @@ class Assunto(models.Model):
 
 class Problema(models.Model):
     codigo_problema = models.AutoField(null=False, blank=False, primary_key=True, )
-    descricao_problema = models.CharField(max_length=128, null=False, blank=False)
+    descricao_problema = models.CharField(max_length=256, null=False, blank=False)
 
     last_update = models.DateTimeField()
 
@@ -119,16 +117,16 @@ class Problema(models.Model):
 
 
 class Empresa(models.Model):
-    razao_social_sindec = models.CharField(max_length=64, null=False, blank=False)
-    nome_fantasia_sindec = models.CharField(max_length=64, null=False, blank=True)
+    razao_social_sindec = models.CharField(max_length=128, null=False, blank=False)
+    nome_fantasia_sindec = models.CharField(max_length=128, null=False, blank=True)
 
     pessoa_juridica = models.BooleanField(null=False, blank=False)
 
-    cnpj = models.PositiveIntegerField(null=False, blank=False, primary_key=True)
+    cnpj = models.BigIntegerField(null=False, blank=False, primary_key=True)
     cnpj_radical = models.PositiveIntegerField(null=True, blank=True)
 
-    razao_social_rfb = models.CharField(max_length=64, null=True, blank=True)
-    nome_fantasia_rfb = models.CharField(max_length=64, null=True, blank=True)
+    razao_social_rfb = models.CharField(max_length=128, null=True, blank=True)
+    nome_fantasia_rfb = models.CharField(max_length=128, null=True, blank=True)
 
     cnae = models.ForeignKey("CNAE", null=True, blank=True)
 
@@ -144,34 +142,13 @@ class Empresa(models.Model):
 
 class CNAE(models.Model):
     codigo_cnae = models.AutoField(null=False, blank=False, primary_key=True)
-    descricao_cnae = models.CharField(max_length=128, null=False, blank=False)
+    descricao_cnae = models.CharField(max_length=256, null=False, blank=False)
 
     last_update = models.DateTimeField()
 
     def save(self, **kwargs):
         self.last_update = timezone.now()
         super(CNAE, self).save(**kwargs)
-
-    class Meta:
-        app_label = sindec_strings.APP_NAME
-
-
-class Endereco(models.Model):
-    logradouro = models.CharField(max_length=128, null=False, blank=False)
-    bairro = models.CharField(max_length=128, null=False, blank=False)
-    cep = models.CharField(max_length=12, null=False, blank=False)
-    cidade = models.CharField(max_length=128, null=False, blank=False)
-    estado = models.CharField(max_length=2, null=False, blank=False)
-    pais = models.CharField(max_length=64, default='Brasil', null=False, blank=False)
-
-    timestamp = models.DateTimeField(blank=False, null=False)
-    last_update = models.DateTimeField()
-
-    def save(self, **kwargs):
-        if not self.id:
-            self.timestamp = timezone.now()
-        self.last_update = timezone.now()
-        super(Endereco, self).save(**kwargs)
 
     class Meta:
         app_label = sindec_strings.APP_NAME

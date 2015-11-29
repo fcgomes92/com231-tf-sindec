@@ -1,0 +1,101 @@
+{% extends "sindec_base/base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+   <link rel="stylesheet" href="{% static "css/datepicker.css" %}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/strike.css" %}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/datatable.css" %}" crossorigin="anonymous">
+    <script src="{% static "js/datatable.js" %}"></script>
+    <script src="{% static "js/bootstrap-datepicker.js" %}"></script>
+    <script src="{% static "js/highchart.js" %}"></script>
+    <script src="{% static "js/highchart-export.js" %}"></script>
+    <script src="{% static "js/highchart-more.js" %}"></script>
+
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                <ul class="list-group">
+                    <h3 class="list-group-item-heading">Relatório de reclamações por dados do consumidor</h3>
+                    <li class="list-group-item noprint">
+                        <div class="row text-center">
+
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                                <div class="input-group input-daterange">
+                                    <input type="text" class="form-control" id="ano_rpr">
+                                        <div class="input-group-addon">
+                                            <span class="glyphicon glyphicon-th"></span>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 noprint">
+                <button class="btn btn-default" id="btn_gerar_relatorio"
+                        onclick="gerar_relatorio_rpr($('#ano_rpr').val())">Gerar Relatório
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+
+    <h4 class="strike"><span>
+        Reclamações por faixa etária
+    </span></h4>
+
+    {% include "sindec_components/relatorio_grafico_barra.html" with titulo_grafico=reclamacoes_por_faixa_etaria_titulo labely=reclamacoes_por_faixa_etaria_labely     categorias=reclamacoes_por_faixa_etaria_categorias conjuntos=reclamacoes_por_faixa_etaria chart_id="grafico_reclamacoes_faixa_etaria" %}</div>
+
+
+    {% include "sindec_components/data_table.html" with table_id='tabela_reclamacoes_faixa_etaria' columns=reclamacoes_por_faixa_etaria_header row_data=reclamacoes_por_faixa_etaria%}
+    <br/>
+    <br/>
+    
+    <h4 class="strike"><span>
+        Reclamações por sexo
+    </span></h4>
+
+    {% include "sindec_components/relatorio_grafico_barra.html" with titulo_grafico=reclamacoes_por_sexo_titulo labely=reclamacoes_por_sexo_labely     categorias=reclamacoes_por_sexo_categorias conjuntos=reclamacoes_por_sexo chart_id="grafico_reclamacoes_sexo" %}
+
+    {% include "sindec_components/data_table.html" with table_id='tabela_reclamacoes_sexo' columns=reclamacoes_por_sexo_header row_data=reclamacoes_por_sexo%}</div>
+
+    <br/>
+    <br/>
+
+    <h4 class="strike"><span>
+        Reclamações por CEP
+    </span></h4>
+
+    {% include "sindec_components/relatorio_grafico_barra.html" with titulo_grafico=reclamacoes_por_cep_titulo labely=reclamacoes_por_cep_labely     categorias=reclamacoes_por_cep_categorias conjuntos=reclamacoes_por_cep chart_id="grafico_reclamacoes_cep" %}
+
+    {% include "sindec_components/data_table.html" with table_id='tabela_reclamacoes_cep' columns=reclamacoes_por_cep_header row_data=reclamacoes_por_cep_tabela%}</div>
+
+    <br/>
+    <br/>
+
+    <script type="application/javascript">
+        $('.input-daterange input').each(function () {
+            $(this).datepicker({
+                format: 'yyyy',
+                autoclose: true,
+                minViewMode: "years",
+                maxViewMode: "years"
+            });
+        });
+
+        $("#ano_final").keyup(function (event) {
+            if (event.keyCode == 13) {
+                $("#btn_gerar_relatorio").click();
+            }
+        });
+
+        function gerar_relatorio_rpr(ano) {
+            var rurl = '{% url "relatorio_rpr" ano="0000" %}'
+                    .replace('0000', ano);
+            window.location.replace(rurl);
+        }
+
+    </script>
+
+{% endblock %}

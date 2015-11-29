@@ -1,0 +1,228 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/gomes/relatorios_reclamacoes.py",
+			"settings":
+			{
+				"buffer_size": 15804,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/relatorios"
+	],
+	"file_history":
+	[
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/relatorios/relatorios_reclamacoes.py~",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/.gitignore",
+		"/home/gomes/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/gomes/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/views/csv.py",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init/reclamacoes-fundamentadas-sindec-2014-v2.csv",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init/reclamacoes-fundamentadas-sindec-2011-v2.csv",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init/reclamacoes-fundamentadas-sindec-2012-2-v2.csv",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init/reclamacoes-fundamentadas-sindec-2012-3-v2.csv",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init/reclamacoes-fundamentadas-sindec-2012-v2.csv",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init/reclamacoes-fundamentadas-sindec-2013-v2.csv",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init/reclamacoes-fundamentadas-sindec-2012-3.csv",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init/reclamacoes-fundamentadas-sindec-2012-2.csv",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init/reclamacoes-fundamentadas-sindec-2012.csv",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init/reclamacoes-fundamentadas-sindec-2014.csv"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"NULL\"",
+			"59631370",
+			"\"NULL\"",
+			"0",
+			"\"NULL\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"0\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/gomes/relatorios_reclamacoes.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15804,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 2565.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tf_com231.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

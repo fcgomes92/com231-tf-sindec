@@ -25,7 +25,10 @@
                         <div class="row text-center">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                                 <div class="input-group input-daterange">
-                                    <input type="text" class="form-control" id="ano_geral">
+                                        <input type="text" class="form-control" id="ano_geral">
+                                        <div class="input-group-addon">
+                                            <span class="glyphicon glyphicon-th"></span>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -106,14 +109,12 @@
 
         <br/>
 
-        {% include "sindec_components/relatorio_grafico_pizza.html" with chart_id="grafico_assuntos" titulo_grafico=titulo_grafico_rana labely=labely_rana conjuntos=conjuntos_rana %}
+        {% include "sindec_components/relatorio_grafico_pizza.html" with chart_id="grafico_assuntos" titulo_grafico=titulo_grafico_rana labely=labely_rana conjuntos=conjuntos_rana %}</div>
 
         {#        Mais Atendem#}
         <br/><br/>
         <h4 class="strike">
-            <span>
-                Ranking dos 100 Fornecedores que mais atenderam aos Consumidores em {{ ano }}
-            </span>
+            <span>Ranking dos 100 Fornecedores que mais atenderam aos Consumidores em {{ ano }}</span>
         </h4>
 
         <div class="text-center">

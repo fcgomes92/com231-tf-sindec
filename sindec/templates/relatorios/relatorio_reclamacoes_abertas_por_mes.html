@@ -38,15 +38,10 @@
     <li class="list-group-item">
         <link rel="stylesheet" href="{% static "css/datatable.css" %}" crossorigin="anonymous">
         <script src="{% static "js/datatable.js" %}"></script>
-        {% include "sindec_components/data_table.html" with table_id='tabela_reclamacoes_abertas_fechadas' columns=colunas_meses row_data=data_row_aberta_fechada %}
+        {% include "sindec_components/data_table.html" with table_id='tabela_reclamacoes_abertas_fechadas' columns=colunas_meses row_data=data_row_aberta_fechada%}
     </li>
 
-    <div class="col-xs-12 col-sm-12">
-        <div id="chart" style="height: 400px; margin: 0 auto"></div>
-    </div>
-
-    {% include "sindec_components/relatorio_grafico_barra.html" %}
-    {#    {% include "sindec_components/relatorio_grafico_pizza.html" %}#}
+    {% include "sindec_components/relatorio_grafico_barra.html" with titulo_grafico=titulo_grafico subtitulo_grafico=subtitulo_grafico labely=labely conjuntos=conjuntos chart_id="grafico_reclamacoes_por_mes" %}
 
     <script src="{% static "js/bootstrap-datepicker.js" %}"></script>
     <script src="{% static "js/highchart.js" %}"></script>

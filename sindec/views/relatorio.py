@@ -55,3 +55,14 @@ class RelatorioDoCadastroNacionalDeReclamacoesFundamentadasRequestView(TemplateV
         context = relatorios_reclamacoes.relatorio_do_cadastro_nacional_de_reclamacoes_fundamentadas(context=context,
                                                                                                      ano=int(ano))
         return context
+
+class RelatorioReclamacoesPorDadosReclamadorRequestView(TemplateView):
+    template_name = "relatorios/relatorio_reclamacoes_por_reclamador.html"
+    http_method_names = ["get", ]
+
+    def get_context_data(self, ano=2009, **kwargs):
+        assert int(ano), Http404()
+        context = super(RelatorioReclamacoesPorDadosReclamadorRequestView, self).get_context_data(
+            **kwargs)
+        context = relatorios_reclamacoes.relatorio_reclamadores(context=context, ano=int(ano))
+        return context
