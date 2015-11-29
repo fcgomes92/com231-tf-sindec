@@ -62,5 +62,4 @@ localdb*
 db_init/*
 sindec/migrations/*
 local_db*
-requirements.txt
 tf_com231.sublime-project
