@@ -25,23 +25,20 @@ class RelatorioReclamacoesAbertasPorMesRequestView(TemplateView):
         return super(RelatorioReclamacoesAbertasPorMesRequestView, self).dispatch(*args, **kwargs)
 
 
-class RelatorioReclamacoesTop10RequestView(TemplateView):
-    template_name = "relatorios/relatorio_reclamacoes_top_10.html"
+class RelatorioReclamacoesPorAnoRequestView(TemplateView):
+    template_name = "relatorios/relatorio_reclamacoes_por_ano.html"
     http_method_names = ["get", ]
 
-    def get_context_data(self, ano_inicial=2009, ano_final=2009, **kwargs):
+    def get_context_data(self, ano_inicial=2009, ano_final=2015, **kwargs):
         assert int(ano_inicial) and int(ano_final), Http404()
-        if ano_inicial > ano_final:
-            ano_inicial, ano_final = ano_final, ano_inicial
-        context = super(RelatorioReclamacoesTop10RequestView, self).get_context_data(**kwargs)
-        context = relatorios_reclamacoes.relatorio_reclamacoes_abertas_por_mes(context=context,
-                                                                               ano_final=int(ano_final),
-                                                                               ano_inicial=int(ano_inicial))
+        context = super(RelatorioReclamacoesPorAnoRequestView, self).get_context_data(**kwargs)
+        context = relatorios_reclamacoes.relatorio_reclamacoes_por_ano(context=context, ano_inicial=int(ano_inicial),
+                                                                       ano_final=ano_final)
         return context
 
     @method_decorator(login_required(login_url=reverse_lazy("login")))
     def dispatch(self, *args, **kwargs):
-        return super(RelatorioReclamacoesTop10RequestView, self).dispatch(*args, **kwargs)
+        return super(RelatorioReclamacoesPorAnoRequestView, self).dispatch(*args, **kwargs)
 
 
 class RelatorioDoCadastroNacionalDeReclamacoesFundamentadasRequestView(TemplateView):
@@ -55,6 +52,7 @@ class RelatorioDoCadastroNacionalDeReclamacoesFundamentadasRequestView(TemplateV
         context = relatorios_reclamacoes.relatorio_do_cadastro_nacional_de_reclamacoes_fundamentadas(context=context,
                                                                                                      ano=int(ano))
         return context
+
 
 class RelatorioReclamacoesPorDadosReclamadorRequestView(TemplateView):
     template_name = "relatorios/relatorio_reclamacoes_por_reclamador.html"

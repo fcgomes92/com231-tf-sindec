@@ -37,20 +37,19 @@
 
                     <li class="list-group-item">
                         <div class="row text-center">
-                            <h3 class="list-group-item-heading">Relatório Top 10</h3>
+                            <h3 class="list-group-item-heading">Relatório de reclamações por ano</h3>
 
                             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                                 <div class="input-group input-daterange">
                                     <span class="input-group-addon">De</span>
-                                    <input type="text" class="form-control" id="ano_inicial_top_10">
+                                    <input type="text" class="form-control" id="ano_inicial_rrpa">
                                     <span class="input-group-addon">até</span>
-                                    <input type="text" class="form-control" id="ano_final_top_10">
+                                    <input type="text" class="form-control" id="ano_final_rrpa">
                                 </div>
                             </div>
-
                             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                                 <button class="btn btn-default" id="btn_gerar_relatorio"
-                                        onclick="gerar_relatorio_top_10($('#ano_inicial_top_10').val(), $('#ano_final_top_10').val())">
+                                        onclick="gerar_relatorio_rrpa($('#ano_inicial_rrpa').val(), $('#ano_final_rrpa').val())">
                                     Gerar
                                     Relatório
                                 </button>
@@ -64,9 +63,10 @@
                                 Fundamentadas</h3>
 
                             <div class="row text-center">
-                                <div class="col-xs-12">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                                     <div class="input-group input-daterange">
                                         <input type="text" class="form-control" id="ano_geral">
+
                                         <div class="input-group-addon">
                                             <span class="glyphicon glyphicon-th"></span>
                                         </div>
@@ -87,18 +87,20 @@
                         <h3 class="list-group-item-heading text-center">
                             Relatório de Reclamações por dados do consumidor
                         </h3>
+
                         <div class="row text-center">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                                 <div class="input-group input-daterange">
-                                        <input type="text" class="form-control" id="ano_rpr">
-                                        <div class="input-group-addon">
-                                            <span class="glyphicon glyphicon-th"></span>
-                                        </div>
+                                    <input type="text" class="form-control" id="ano_rpr">
+
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 noprint">
                                 <button class="btn btn-default" id="btn_gerar_relatorio"
-                                    onclick="gerar_relatorio_rpr($('#ano_rpr').val())">Gerar Relatório
+                                        onclick="gerar_relatorio_rpr($('#ano_rpr').val())">Gerar Relatório
                                 </button>
                             </div>
                         </div>
@@ -135,8 +137,9 @@
             window.location.replace(rurl);
         }
 
-        function gerar_relatorio_top_10(ano_inicial, ano_final) {
-            var rurl = '{% url "relatorio_reclamacoes_abertas_mes" ano_inicial="0000" ano_final="0001" %}'
+        function gerar_relatorio_rrpa(ano_inicial, ano_final) {
+
+            var rurl = '{% url "relatorio_reclamacoes_por_ano" ano_inicial="0000" ano_final="0001" %}'
                     .replace('0000', ano_inicial).replace('0001', ano_final);
             window.location.replace(rurl);
         }

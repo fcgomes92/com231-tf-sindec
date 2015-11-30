@@ -50,7 +50,7 @@ class Consumidor(models.Model):
         (5, "entre 51 e 60 anos"),
         (6, "entre 61 e 70 anos"),
         (7, "mais de 70 anos"),
-        (8, "Nao Informada"),
+        (8, "Não Informada"),
     )
 
     sexo = models.CharField(max_length=1, null=False, blank=False, choices=CHOICES_GENDER)

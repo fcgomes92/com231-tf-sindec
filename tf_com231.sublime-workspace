@@ -45,34 +45,37 @@
 	"expanded_folders":
 	[
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231",
-		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/db_init",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/relatorios",
-		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/static",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/empresa",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/procom",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/reclamacao",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/relatorios",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_base",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/views",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/tf_com231"
 	],
 	"file_history":
 	[
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/relatorios/relatorios_reclamacoes.py",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/relatorios/relatorios_procom.py",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/relatorios/relatorios_empresa.py",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/models.py",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/tf_com231/settings.py",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/urls.py",
+		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components/dashboard_sidebar.html",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/requirements.txt",
 		"/home/gomes/relatorios_reclamacoes.py",
 		"/home/gomes/requeriments.txt",
 		"/home/gomes/requirements.txt",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/relatorios/relatorio_reclamacoes_por_reclamador.html",
-		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/models.py",
-		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/relatorios/relatorios_reclamacoes.py",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/views/relatorio.py",
-		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/urls.py",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/procom/dashboard.html",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/relatorios/relatorio_do_cadastro_nacional_de_reclamacoes_fundamentadas.html",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components/relatorio_grafico_barra.html",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/templates/sindec_components/relatorio_grafico_pizza.html",
-		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/tf_com231/settings.py",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/sindec/relatorios/relatorios_reclamacoes.py~",
 		"/home/gomes/dados/development/workspaces/unifei/com231/tf_com231/.gitignore",
 		"/home/gomes/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
@@ -116,7 +119,7 @@
 			"\"NULL\""
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -134,11 +137,6 @@
 	},
 	"groups":
 	[
-		{
-			"sheets":
-			[
-			]
-		},
 		{
 			"sheets":
 			[
@@ -162,18 +160,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -221,7 +212,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

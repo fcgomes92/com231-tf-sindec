@@ -75,14 +75,13 @@ WSGI_APPLICATION = 'tf_com231.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
-    #'default': {
-        #'ENGINE': 'django.db.backends.oracle',
-        #'NAME': '192.168.0.102'
-                #':1521/ORA12C',
-        #'USER': 'c##django_sindec',
-        #'PASSWORD': 'qwe123',
-    #}
-     'default': {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.oracle',
+    #     'NAME': '192.168.43.175:8010/ORA12C',
+    #     'USER': 'c##django_sindec',
+    #     'PASSWORD': 'qwe123',
+    # }
+    'default': {
          'ENGINE': 'django.db.backends.sqlite3',
          'NAME': os.path.join(BASE_DIR, 'local_db.sqlite3'),
      }

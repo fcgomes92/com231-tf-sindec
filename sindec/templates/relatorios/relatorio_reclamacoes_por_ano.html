@@ -1,0 +1,79 @@
+{% extends "sindec_base/base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+    <link rel="stylesheet" href="{% static "css/datepicker.css" %}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/strike.css" %}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/datatable.css" %}" crossorigin="anonymous">
+    <script src="{% static "js/datatable.js" %}"></script>
+    <script src="{% static "js/bootstrap-datepicker.js" %}"></script>
+    <script src="{% static "js/highchart.js" %}"></script>
+    <script src="{% static "js/highchart-export.js" %}"></script>
+    <script src="{% static "js/highchart-more.js" %}"></script>
+
+    <div class="container-fluid text-center">
+        <h3 class="list-group-item-heading strike">
+                        <span>
+                            Relatório Reclamações por Ano
+                        </span>
+        </h3>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                <ul class="list-group">
+                    <li class="list-group-item noprint">
+                        <div class="row text-center">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                                <div class="input-group input-daterange">
+                                    <span class="input-group-addon">De</span>
+                                    <input type="text" class="form-control" id="ano_inicial_rrpa">
+                                    <span class="input-group-addon">até</span>
+                                    <input type="text" class="form-control" id="ano_final_rrpa">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 noprint">
+                <button class="btn btn-default" id="btn_gerar_relatorio"
+                        onclick="gerar_relatorio_rrpa($('#ano_inicial_rrpa').val(), $('#ano_final_rrpa').val())">
+                    Gerar
+                    Relatório
+                </button>
+            </div>
+        </div>
+        <br/>
+
+        {% include "sindec_components/relatorio_grafico_barra.html" with  titulo_grafico=titulo_grafico_rrpa subtitulo_grafico=subtitulo_grafico_rrpa categorias=categorias_rrpa conjuntos=conjuntos_rrpa chart_id="chart_rrpa" %}
+        {#    </div>#}
+
+        {% include "sindec_components/data_table.html" with columns=columns_rrpa row_data=conjuntos_rrpa table_id="table_rrpa" %}
+
+
+        <script type="application/javascript">
+            $('.input-daterange input').each(function () {
+                $(this).datepicker({
+                    format: 'yyyy',
+                    autoclose: true,
+                    minViewMode: "years",
+                    maxViewMode: "years"
+                });
+            });
+
+            $("#ano_final").keyup(function (event) {
+                if (event.keyCode == 13) {
+                    $("#btn_gerar_relatorio").click();
+                }
+            });
+
+            function gerar_relatorio_rrpa(ano_inicial, ano_final) {
+
+                var rurl = '{% url "relatorio_reclamacoes_por_ano" ano_inicial="0000" ano_final="0001" %}'
+                        .replace('0000', ano_inicial).replace('0001', ano_final);
+                window.location.replace(rurl);
+            }
+
+        </script>
+
+{% endblock %}
