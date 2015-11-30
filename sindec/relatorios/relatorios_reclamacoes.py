@@ -9,8 +9,8 @@ def relatorio_reclamacoes_por_ano(context=None, ano_inicial=2009, ano_final=2015
     categorias_rrpa = list()
     conjuntos_rrpa = list()
 
-    reclamacoes = Reclamacao.objects.values("ano").annotate(num_reclamacoes=Count('id')) \
-        .filter(ano__gte=ano_inicial).filter(ano__lte=ano_final)
+    reclamacoes = Reclamacao.objects.values("ano").annotate(num_reclamacoes=Count('id')).filter(
+        ano__gte=ano_inicial).filter(ano__lte=ano_final)
 
     categorias_rrpa = ["Anos", ]
 
@@ -32,41 +32,39 @@ def relatorio_reclamacoes_abertas_por_mes(context, ano_inicial=2009, ano_final=2
     if context is None:
         context = dict()
 
-    # Gráfico
+    anos = [x for x in range(ano_inicial, ano_final + 1)]
     meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez', ]
-    reclamacoes_data = [0 for i in meses]
     qtd_reclamacoes = list()
+    reclamacoes = Reclamacao.objects
 
-    for r in Reclamacao.objects.values('data_abertura').annotate(num_reclamacoes=Count('data_abertura')) \
-            .filter(data_abertura__gte=timezone.datetime(year=ano_inicial, month=1, day=1)) \
-            .filter(data_abertura__lte=timezone.datetime(year=ano_final, month=12, day=30)):
-        if r.get("data_abertura", None) is not None:
-            reclamacoes_data[r.get("data_abertura").month - 1] += r.get('num_reclamacoes')
+    for a in anos:
+        print(a)
+        reclamacoes_data_abertura = [0 for i in meses]
+        reclamacoes_data_fechamento = [0 for i in meses]
+        for r in reclamacoes.values('data_abertura').annotate(num_reclamacoes=Count('data_abertura')).filter(
+                data_abertura__gte=timezone.datetime(year=a, month=1, day=1)).filter(
+            data_abertura__lte=timezone.datetime(year=a, month=12, day=30)):
+            if r.get("data_abertura", None) is not None:
+                reclamacoes_data_abertura[r.get("data_abertura").month - 1] += r.get('num_reclamacoes')
 
-    qtd_reclamacoes.append({
-        "name": "Abertura de Reclamações",
-        "data": reclamacoes_data
-    })
+        qtd_reclamacoes.append({
+            "name": "Abertura de Reclamações em {}".format(a),
+            "data": reclamacoes_data_abertura
+        })
 
-    # print(reclamacoes_data)
+        print(qtd_reclamacoes)
 
-    reclamacoes_data_fechamento = [0 for i in meses]
+        for r in reclamacoes.values('data_fechamento').filter(ano=a).annotate(num_reclamacoes=Count('data_fechamento')).filter(
+                data_fechamento__gte=timezone.datetime(year=a, month=1, day=1)).filter(
+            data_fechamento__lte=timezone.datetime(year=a, month=12, day=30)):
+            if r.get("data_fechamento", None) is not None:
+                reclamacoes_data_fechamento[r.get("data_fechamento").month - 1] += r.get('num_reclamacoes')
 
-    for r in Reclamacao.objects.values('data_fechamento').annotate(num_reclamacoes=Count('data_fechamento')) \
-            .filter(data_fechamento__gte=timezone.datetime(year=ano_inicial, month=1, day=1)) \
-            .filter(data_fechamento__lte=timezone.datetime(year=ano_final, month=12, day=30)):
-        if r.get("data_fechamento", ) is not None:
-            reclamacoes_data_fechamento[r.get("data_fechamento").month - 1] += r.get('num_reclamacoes')
+        qtd_reclamacoes.append({
+            "name": "Fechamento de Reclamações em {}".format(a),
+            "data": reclamacoes_data_fechamento
+        })
 
-    # print(reclamacoes_data_fechamento)
-
-    qtd_reclamacoes.append({
-        "name": "Fechamento de Reclamações",
-        "data": reclamacoes_data_fechamento
-    })
-
-    # Table
-    # Colunas
     context["categorias"] = meses
     fc = ["Abertas/Fechadas"]
     fc.extend(meses)
@@ -74,9 +72,10 @@ def relatorio_reclamacoes_abertas_por_mes(context, ano_inicial=2009, ano_final=2
     context["colunas_meses"] = meses
     context["data_row_aberta_fechada"] = qtd_reclamacoes
     context["conjuntos"] = qtd_reclamacoes
-    context["titulo_grafico"] = "Reclamações Abertas de {} a {}".format(ano_inicial, ano_final)
+    context["titulo_grafico"] = "Reclamações Abertas e Fechadas de {} a {}".format(ano_inicial, ano_final)
+    context["subtitulo_grafico"] = "por mês"
     context["metrica"] = "Reclamações"
-    context["labely"] = "Quantidade de Reclamações Abertas"
+    context["labely"] = "Quantidade de Reclamações"
 
     return context
 

@@ -3,7 +3,7 @@ from django.utils.decorators import method_decorator
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse_lazy
-from sindec.relatorios import relatorios_procom, relatorios_empresa, relatorios_reclamacoes
+from sindec.relatorios import relatorios_reclamacoes
 
 
 class RelatorioReclamacoesAbertasPorMesRequestView(TemplateView):

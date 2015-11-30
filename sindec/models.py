@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils import timezone
-from sindec.util import strings as sindec_strings
+from sindec.utils import strings as sindec_strings
 
 
 class User(AbstractUser):

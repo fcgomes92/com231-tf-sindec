@@ -1,5 +1,7 @@
 from django.utils.translation import ugettext as _
 
+APP_NAME = "sindec"
+
 # views/user
 LOGIN_SUCCESS = _("Login realizado com sucesso!")
 LOGIN_ERR = _("Erro de login!")
