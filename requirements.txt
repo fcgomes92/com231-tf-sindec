@@ -46,7 +46,7 @@ pysmbc==1.0.15.4
 python-apt==1.0.1
 python-debian==0.1.27
 pyxdg==0.25
-reportlab==3.2.0
+reportlab==3.5.55
 requests==2.7.0
 screen-resolution-extra==0.0.0
 sessioninstaller==0.0.0
